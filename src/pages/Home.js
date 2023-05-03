@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+// import Features from "./Features";
 
 const Home = () => {
   return (
@@ -28,12 +29,12 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="filter__form bg-white shadow-lg">
-              <form method="GET" action="http://127.0.0.1:8000/partnere">
+            <div className="filter_form bg-white shadow-lg">
+              <form method="GET">
                 <div className="row mx-n2 d-flex align-items-center">
                   <div className="col-12 col-md col-lg-5 d-flex flex-column my-1 px-2">
                     <div className="form-group-overlay first">
-                      <label for="locations">Location</label>
+                      <label htmlFor="locations">Location</label>
                       <input
                         id="location"
                         name=""
