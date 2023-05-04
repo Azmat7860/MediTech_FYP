@@ -13,7 +13,7 @@ const RecentBlogs = () => {
 
         <div class="row gy-4">
 
-          <div class="col-xl-4 col-md-6">
+          <div class="col-xl-4 col-md-6 post-box">
             <article>
 
               <div class="post-img">
@@ -31,7 +31,7 @@ const RecentBlogs = () => {
                 <div class="post-meta">
                   <p class="post-author">Maria Doe</p>
                   <p class="post-date">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
+                    <time dateTime="2022-01-01">Jan 1, 2022</time>
                   </p>
                 </div>
               </div>
@@ -39,7 +39,7 @@ const RecentBlogs = () => {
             </article>
           </div>
 
-          <div class="col-xl-4 col-md-6">
+          <div class="col-xl-4 col-md-6 post-box">
             <article>
 
               <div class="post-img">
@@ -57,7 +57,7 @@ const RecentBlogs = () => {
                 <div class="post-meta">
                   <p class="post-author">Allisa Mayer</p>
                   <p class="post-date">
-                    <time datetime="2022-01-01">Jun 5, 2022</time>
+                    <time dateTime="2022-01-01">Jun 5, 2022</time>
                   </p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const RecentBlogs = () => {
             </article>
           </div>
 
-          <div class="col-xl-4 col-md-6">
+          <div class="col-xl-4 col-md-6 post-box">
             <article>
 
               <div class="post-img">
@@ -83,7 +83,7 @@ const RecentBlogs = () => {
                 <div class="post-meta">
                   <p class="post-author">Mark Dower</p>
                   <p class="post-date">
-                    <time datetime="2022-01-01">Jun 22, 2022</time>
+                    <time dateTime="2022-01-01">Jun 22, 2022</time>
                   </p>
                 </div>
               </div>

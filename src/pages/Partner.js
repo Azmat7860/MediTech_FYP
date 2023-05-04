@@ -1,6 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
+import { init } from "../js/main";
 
 const Partner = () => {
+  useEffect(() => {
+    //   // Call a function from the imported script
+      init();
+    }, []);
   return (
     <div>
       <section id="clients" class="clients">

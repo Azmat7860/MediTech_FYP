@@ -44,7 +44,7 @@ const Footer = () => {
                       <a href="/">Privacy policy</a>
                     </li>
                     <li>
-                      <i  className="bi bi-chevron-right"></i> <Link to={"/faq"}>FAQ's</Link>
+                      <i  className="bi bi-chevron-right"></i> <Link to="/faq">FAQ's</Link>
                     </li>
                   </ul>
                 </div>

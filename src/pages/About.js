@@ -1,10 +1,12 @@
 import React from "react";
 import WhyUs from "./WhyUs";
 import Count from "./Count";
+import Breadcrumb from "../components/Breadcrumb";
 
 const About = () => {
   return (
     <div>
+      <Breadcrumb/>
       <section id="about" class="about">
         <div class="container" data-aos="fade-up">
           <div class="section-title">

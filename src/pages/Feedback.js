@@ -1,6 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
+import { init } from "../js/main";
 
 const Feedback = () => {
+  useEffect(() => {
+    //   // Call a function from the imported script
+      init();
+    }, []);
   return (
     <div>
       <section id="testimonials" class="testimonials">

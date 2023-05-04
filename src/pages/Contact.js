@@ -1,8 +1,10 @@
 import React from "react";
+import Breadcrumb from "../components/Breadcrumb";
 
 const Contact = () => {
   return (
     <div>
+      <Breadcrumb/>
       <section id="contact" className="contact">
         <div className="container" data-aos="fade-up">
           <div className="section-header">
