@@ -87,32 +87,32 @@ const Services = () => {
                     <ul>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/male-sexual-dysfunction">
-                          Male Sexual Dysfunction{" "}
+                          Male Sexual Dysfunction 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/anal-fissurefistula">
-                          Anal Fissurefistula{" "}
+                          Anal Fissurefistula 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/growth-disorders">
-                          Growth Disorders{" "}
+                          Growth Disorders 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/thyroid-gland-diseases">
-                          Thyroid Gland Diseases{" "}
+                          Thyroid Gland Diseases 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/premature-ejaculation">
-                          Premature Ejaculation{" "}
+                          Premature Ejaculation 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/fungal-nail-infection">
-                          Fungal Nail Infection{" "}
+                          Fungal Nail Infection 
                         </a>
                       </li>
                       <li>
@@ -127,22 +127,22 @@ const Services = () => {
                       </li>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/migraine">
-                          Migraine{" "}
+                          Migraine 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/piles">
-                          Piles{" "}
+                          Piles 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/polycystic-ovary-syndrome">
-                          Polycystic Ovary Syndrome{" "}
+                          Polycystic Ovary Syndrome 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/all-diseases/abortion">
-                          Abortion{" "}
+                          Abortion 
                         </a>
                       </li>
                       <li>
@@ -227,17 +227,17 @@ const Services = () => {
                     <ul>
                       <li>
                         <a href="https://www.marham.pk/hospitals/lahore">
-                          All Medical Stores in Lahore{" "}
+                          All Medical Stores in Lahore 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/hospitals/karachi">
-                          All Medical Stores in Karachi{" "}
+                          All Medical Stores in Karachi 
                         </a>
                       </li>
                       <li>
                         <a href="https://www.marham.pk/hospitals/islamabad">
-                          All Medical Stores in Islamabad{" "}
+                          All Medical Stores in Islamabad 
                         </a>
                       </li>
                       <li>

@@ -271,8 +271,8 @@ section {
 }
 
 .header .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+  max-height: 30px;
+  margin-right: 5px;
 }
 
 .header .logo h1 {
@@ -498,6 +498,29 @@ section {
 }
 
 
+.navbar .btn-auth {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  color: var(--color-white);
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid var(--color-green);
+}
+
+.navbar .btn-auth:hover {
+  background: var(--color-green);
+  color: #fff;
+  text-decoration: none;
+}
+
+
 /*--------------------------------------------------------------
 # Mobile Navigation
 --------------------------------------------------------------*/
@@ -601,6 +624,214 @@ section {
   }
 }
 
+
+/* ----------------------------------------------------------
+  Login Section
+------------------------------------------------------------*/
+.login-content{
+  background-color: var(--color-success);
+  background: linear-gradient(90deg, var(--color-success) 50%, var(--color-green) 100%);
+  min-height: 400px;
+  margin: 40px 0px;
+  border-radius: 5px;
+}
+.login-content{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+ margin-left: 8%;
+
+}
+
+.login-content h1{
+  color: #fff;
+}
+.login-content p{
+  font-size: 18px;
+  color: #fff;
+}
+
+.btn-reg{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  color: var(--color-green);
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid var(--color-green);
+}
+.btn-reg:hover{
+  background: var(--color-success);
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-form{
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  margin: 40px 0px;
+  padding: 10px;
+
+}
+
+#login-form{
+  margin: 20px 20px;
+  padding: 10px;
+}
+.login-form h1{
+  margin: 20px 30px;
+}
+
+#login-form label{
+  font-size: 18px;
+}
+
+#login-form Input{
+  padding: 5px 2px;
+}
+
+#login-form .login-form-forgot{
+float: right;
+}
+
+#login-form  .login-form-button{
+padding: 0px 30px;
+font-size: 18px;
+}
+
+.login-form-button{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  color: var(--color-green);
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid var(--color-green);
+}
+
+.login-form-button:hover{
+  background: var(--color-success);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------------
+  Sigup Section
+------------------------------------------------------------*/
+
+#register-content{
+  background-color: var(--color-success);
+  background: linear-gradient(90deg, var(--color-success) 50%, rgba(var(--color-green-rgb)) 100%);
+  min-height: 400px;
+  margin: 40px 0px;
+  border-radius: 5px;
+}
+#register-content{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+
+}
+
+#register-content h1{
+  color: #fff;
+}
+#register-content p{
+  font-size: 18px;
+  color: #fff;
+}
+
+.btn-reg{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 7px 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  color: var(--color-green);
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid var(--color-green);
+}
+.btn-reg:hover{
+  background: var(--color-success);
+  color: #fff;
+  text-decoration: none;
+}
+
+.register-form{
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  margin: 40px 0px;
+  margin-left: 7%;
+  padding: 5px;
+
+}
+
+#register-form{
+  margin: 20px 15px;
+  padding: 5px;
+}
+.register-form h1{
+  margin: 0px 20px;
+}
+
+#register-form label{
+  font-size: 18px;
+}
+
+#register-form Input{
+  padding: 5px 2px;
+}
+
+
+#register-form  .register-form-button{
+padding: 0px 30px;
+font-size: 18px;
+}
+
+.register-form-button{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  color: var(--color-green);
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid var(--color-green);
+}
+
+.register-form-button:hover{
+  background: var(--color-success);
+  color: #fff;
+  text-decoration: none;
+}
 /*--------------------------------------------------------------
 # Home Section
 --------------------------------------------------------------*/
@@ -609,11 +840,16 @@ section {
   background: var(--color-success) !important;
 }
 
+#start{
+  min-height: 650px;
+  padding-top: 220px;
+}
+
 @media (max-width: 767.98px) {
 
   section[class*=with-header],
   footer[class*=with-header] {
-    margin-top: -8rem;
+    margin-top: -10rem;
     padding-top: 9.75rem;
   }
 }
@@ -704,7 +940,7 @@ input[type=button].btn-block {
     position: inherit;
     transform: inherit;
     height: 20px;
-    padding: 0;
+    padding: 0 0 0 15px;
     margin: 0;
   }
 
@@ -1213,14 +1449,14 @@ nav[aria-label="breadcrumb"] li:before {
   border-radius: 4px;
   transition: 0.3s;
   line-height: 1;
-  color: #47b2e4;
+  color: var(--color-green);
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid #47b2e4;
+  border: 2px solid var(--color-green);
 }
 
 .about .btn-learn-more:hover {
-  background: #47b2e4;
+  background: var(--color-success);
   color: #fff;
   text-decoration: none;
 }
@@ -2433,6 +2669,11 @@ nav[aria-label="breadcrumb"] li:before {
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
+  transition: 0.3s;
+}
+
+.recent-posts .post-box:hover .post-img img {
+  transition: 0.5s;
 }
 
 .recent-posts .post-img {
@@ -2452,6 +2693,7 @@ nav[aria-label="breadcrumb"] li:before {
   font-weight: 700;
   padding: 0;
   margin: 0 0 20px 0;
+  transition: 0.3s;
 }
 
 .recent-posts .title a {
@@ -2478,6 +2720,10 @@ nav[aria-label="breadcrumb"] li:before {
   font-size: 14px;
   color: #3c3c3c;
   margin-bottom: 0;
+}
+
+.recent-posts .post-box:hover .post-img img {
+  transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------

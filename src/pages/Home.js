@@ -1,15 +1,30 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+// import { init } from "../js/main";
 // import Features from "./Features";
+import HorizontalCards from './HorizontalCards';
+import TopSpecialist from './TopSpecialist';
+import TopDisease from './TopDisease';
+import CallToAction from './CallToAction';
+import Step from './Step';
+import Feedback from './Feedback';
+import Partner from './Partner';
+import RecentBlogs from './Health Blog/RecentBlogs';
+import Services from './Services';
+
 
 const Home = () => {
+  // useEffect(() => {
+  //   // Call a function from the imported script
+  //   init();
+  // }, []);
   return (
     <div>
       <section
         className="filter overflow-visible bg-tertiary with-header"
         id="start"
       >
-        <div className="d-flex flex-column">
+        <div className="d-flex flex-column" data-aos="zoom-in">
           <div className="container order-1 order-md-1 pt-5 pb-md-5 mt-5">
             <div className="row">
               <div className="col-12 col-md-10 offset-md-1">
@@ -42,13 +57,13 @@ const Home = () => {
                         type="text"
                         size="50"
                         placeholder="Select Location"
-                        autocomplete="off"
+                        autoComplete="off"
                       />
                     </div>
                   </div>
                   <div className="col-12 col-md col-lg-5 d-flex flex-column my-1 px-2">
                     <div className="form-group-overlay">
-                      <label for="guests">Doctor</label>
+                      <label htmlFor="doctors">Doctor</label>
                       <input
                         id="doctor"
                         name=""
@@ -72,6 +87,15 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <HorizontalCards />
+      <TopSpecialist />
+      <TopDisease />
+      <CallToAction />
+      <Step />
+      <Feedback />
+      <Partner />
+      <RecentBlogs />
+      <Services />
     </div>
   );
 };

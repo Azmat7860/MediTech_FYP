@@ -1,8 +1,10 @@
 import React from "react";
+import Breadcrumb from "../components/Breadcrumb";
 
 const Faq = () => {
   return (
     <div>
+      <Breadcrumb/>
       <section id="faq" className="faq section-bg">
         <div className="container" data-aos="fade-up">
           <div className="section-title text-center">

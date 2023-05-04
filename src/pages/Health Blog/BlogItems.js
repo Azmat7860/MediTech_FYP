@@ -1,41 +1,11 @@
 import React from "react";
+import Breadcrumb from "../../components/Breadcrumb";
 
 const BlogItems = () => {
   return (
     <div>
       <main id="main">
-        {/* <!-- ======= Breadcrumbs ======= --> */}
-        <div class="breadcrumbs">
-          <div
-            class="page-header d-flex align-items-center"
-            style={{backgroundImage: "url('')"}}
-          >
-            <div class="container position-relative">
-              <div class="row d-flex justify-content-center">
-                <div class="col-lg-6 text-center">
-                  <h2>Blog Details</h2>
-                  <p>
-                    Odio et unde deleniti. Deserunt numquam exercitationem.
-                    Officiis quo odio sint voluptas consequatur ut a odio
-                    voluptatem. Sit dolorum debitis veritatis natus dolores.
-                    Quasi ratione sint. Sit quaerat ipsum dolorem.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <nav>
-            <div class="container">
-              <ol>
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
-                <li>Blog Details</li>
-              </ol>
-            </div>
-          </nav>
-        </div>
-        {/* <!-- End Breadcrumbs --> */}
+       <Breadcrumb/>
 
         {/* <!-- ======= Blog Details Section ======= --> */}
         <section id="blog" class="blog">
@@ -65,7 +35,7 @@ const BlogItems = () => {
                       <li class="d-flex align-items-center">
                         <i class="bi bi-clock"></i>{" "}
                         <a href="blog-details.html">
-                          <time datetime="2020-01-01">Jan 1, 2022</time>
+                          <time dateTime="2020-01-01">Jan 1, 2022</time>
                         </a>
                       </li>
                       <li class="d-flex align-items-center">
@@ -223,7 +193,7 @@ const BlogItems = () => {
                             <i class="bi bi-reply-fill"></i> Reply
                           </a>
                         </h5>
-                        <time datetime="2020-01-01">01 Jan,2022</time>
+                        <time dateTime="2020-01-01">01 Jan,2022</time>
                         <p>
                           Et rerum totam nisi. Molestiae vel quam dolorum vel
                           voluptatem et et. Est ad aut sapiente quis molestiae
@@ -246,7 +216,7 @@ const BlogItems = () => {
                             <i class="bi bi-reply-fill"></i> Reply
                           </a>
                         </h5>
-                        <time datetime="2020-01-01">01 Jan,2022</time>
+                        <time dateTime="2020-01-01">01 Jan,2022</time>
                         <p>
                           Ipsam tempora sequi voluptatem quis sapiente non.
                           Autem itaque eveniet saepe. Officiis illo ut beatae.
@@ -266,7 +236,7 @@ const BlogItems = () => {
                               <i class="bi bi-reply-fill"></i> Reply
                             </a>
                           </h5>
-                          <time datetime="2020-01-01">01 Jan,2022</time>
+                          <time dateTime="2020-01-01">01 Jan,2022</time>
                           <p>
                             Enim ipsa eum fugiat fuga repellat. Commodi quo quo
                             dicta. Est ullam aspernatur ut vitae quia mollitia
@@ -297,7 +267,7 @@ const BlogItems = () => {
                                 <i class="bi bi-reply-fill"></i> Reply
                               </a>
                             </h5>
-                            <time datetime="2020-01-01">01 Jan,2022</time>
+                            <time dateTime="2020-01-01">01 Jan,2022</time>
                             <p>
                               Et dignissimos impedit nulla et quo distinctio ex
                               nemo. Omnis quia dolores cupiditate et. Ut unde
@@ -324,7 +294,7 @@ const BlogItems = () => {
                             <i class="bi bi-reply-fill"></i> Reply
                           </a>
                         </h5>
-                        <time datetime="2020-01-01">01 Jan,2022</time>
+                        <time dateTime="2020-01-01">01 Jan,2022</time>
                         <p>
                           Distinctio nesciunt rerum reprehenderit sed. Iste
                           omnis eius repellendus quia nihil ut accusantium
@@ -352,7 +322,7 @@ const BlogItems = () => {
                             <i class="bi bi-reply-fill"></i> Reply
                           </a>
                         </h5>
-                        <time datetime="2020-01-01">01 Jan,2022</time>
+                        <time dateTime="2020-01-01">01 Jan,2022</time>
                         <p>
                           Dolorem atque aut. Omnis doloremque blanditiis quia
                           eum porro quis ut velit tempore. Cumque sed quia ut
@@ -475,7 +445,7 @@ const BlogItems = () => {
                               Nihil blanditiis at in nihil autem
                             </a>
                           </h4>
-                          <time datetime="2020-01-01">Jan 1, 2020</time>
+                          <time dateTime="2020-01-01">Jan 1, 2020</time>
                         </div>
                       </div>
 
@@ -487,7 +457,7 @@ const BlogItems = () => {
                               Quidem autem et impedit
                             </a>
                           </h4>
-                          <time datetime="2020-01-01">Jan 1, 2020</time>
+                          <time dateTime="2020-01-01">Jan 1, 2020</time>
                         </div>
                       </div>
 
@@ -499,7 +469,7 @@ const BlogItems = () => {
                               Id quia et et ut maxime similique occaecati ut
                             </a>
                           </h4>
-                          <time datetime="2020-01-01">Jan 1, 2020</time>
+                          <time dateTime="2020-01-01">Jan 1, 2020</time>
                         </div>
                       </div>
 
@@ -511,7 +481,7 @@ const BlogItems = () => {
                               Laborum corporis quo dara net para
                             </a>
                           </h4>
-                          <time datetime="2020-01-01">Jan 1, 2020</time>
+                          <time dateTime="2020-01-01">Jan 1, 2020</time>
                         </div>
                       </div>
 
@@ -523,7 +493,7 @@ const BlogItems = () => {
                               Et dolores corrupti quae illo quod dolor
                             </a>
                           </h4>
-                          <time datetime="2020-01-01">Jan 1, 2020</time>
+                          <time dateTime="2020-01-01">Jan 1, 2020</time>
                         </div>
                       </div>
                     </div>
