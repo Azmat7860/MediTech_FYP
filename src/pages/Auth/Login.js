@@ -1,48 +1,54 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Row, Col, Button } from "antd";
 import { Typography } from "antd";
 import { UserAddOutlined } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
-import { LockOutlined, MailOutlined } from "@ant-design/icons";
-import { Checkbox, Form, Input } from "antd";
+import { LockOutlined, MailOutlined, CloseOutlined } from "@ant-design/icons";
+import { Checkbox, Form, Input, Alert } from "antd";
 import Breadcrumb from "../../components/Breadcrumb";
-// import axios  from 'axios';
+import { authContext } from "../../context/authContext";
+import axios from "axios";
 const { Title } = Typography;
 
 function Login() {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [size, setSize] = useState('large');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  const auth = useContext(authContext);
 
-    const onFinish = (values) => {
-      console.log("Received values of form: ", values);
-      // var config = {
-      //   method: "POST",
-      //   url: "http://localhost:3500/user/login",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   data: values,
-      // };
+  const onFinish = (values) => {
+    console.log("Received values of form: ", values);
+    const formData = new FormData();
+    formData.append('email', values.email);
+    formData.append('password', values.password);
 
-      // axios(config)
-      //   .then(function (response) {
-      //     console.log(JSON.stringify(response.data));
-      //     // auth.setUser(response.data);
-      //     // auth.login();
-      //     if (response.response.status === 401) {
-      //       setIsLoggedIn(true);
-      //     }
-      //   })
-      //   .catch(function (error) {
-      //     console.log(error);
-      //   });
+    let config = {
+      method: "post",
+      // maxBodyLength: Infinity,
+      url: "http://localhost:4000/auth/login",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: formData,
     };
- 
+
+    axios(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+        auth.setUser(response.data);
+        auth.login();
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoggedIn(true);
+      });
+  };
+
   return (
     <>
-    <div>
-      <Breadcrumb/>
-    </div>
+      <div>
+        <Breadcrumb />
+      </div>
       <div id="login">
         <Row>
           <Col span={8} className="login-content">
@@ -60,7 +66,18 @@ function Login() {
               </Button>
             </NavLink>
           </Col>
+
           <Col span={11} className="login-form">
+            {isLoggedIn && (
+              <Alert
+                message="Invalid Email and Password"
+                type="error"
+                showIcon
+                onClose={() => setIsLoggedIn(false)}
+                closable
+                closeIcon={<CloseOutlined />}
+              />
+            )}
             <Title level={1}>LOGIN</Title>
             <Form
               name="normal_login"
@@ -71,15 +88,6 @@ function Login() {
               }}
               onFinish={onFinish}
             >
-              {/* {isLoggedIn && (
-                <Alert
-                  message="Unauthorized"
-                  type="error"
-                  onClose={() => setIsLoggedIn(false)}
-                  closable
-                  closeIcon={<CloseOutlined />}
-                />
-              )} */}
               <label>
                 <b>Email</b>
               </label>
@@ -95,6 +103,8 @@ function Login() {
                 <Input
                   prefix={<MailOutlined />}
                   placeholder="Enter Your Email"
+                  // value={email}
+                  // onChange={(e) => setEmail(e.target.value)}
                 />
               </Form.Item>
               <label>
@@ -113,6 +123,8 @@ function Login() {
                   prefix={<LockOutlined className="site-form-item-icon" />}
                   type="password"
                   placeholder="Password"
+                  // value={password}
+                  // onChange={(e) => setPassword(e.target.value)}
                 />
               </Form.Item>
               <Form.Item>

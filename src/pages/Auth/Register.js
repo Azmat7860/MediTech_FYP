@@ -1,54 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Button } from "antd";
 import { Typography } from "antd";
 import { LoginOutlined } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
-import { LockOutlined, MailOutlined } from "@ant-design/icons";
-import { Checkbox, Form, Input } from "antd";
-// import axios from "axios";
+import { Alert, Form, Input, Checkbox } from "antd";
+import {
+  // PlusOutlined,
+  MailOutlined,
+  LockOutlined,
+  // UserOutlined,
+  CloseOutlined,
+} from "@ant-design/icons";
+
+import axios from "axios";
+import Breadcrumb from "../../components/Breadcrumb";
 const { Title } = Typography;
 
 function Register() {
-  // const [isRegistered, setIsRegistered] = useState(false);
-  // const [size, setSize] = useState('large');
+  const [isRegistered, setIsRegistered] = useState(false);
+
   const onFinish = (values) => {
     console.log("Success:", values);
-  }
-    // var config = {
-      // console.log("first");
-    //   method: "POST",
-    //   url: "http://localhost:3500/user/register",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   data: values,
-    // };
+    const formData = new FormData();
+    formData.append("name", values.name);
+    formData.append("email", values.email);
+    formData.append("password", values.password);
 
-    // axios(config)
-    //   .then(function (response) {
-    //     console.log(JSON.stringify(response));
-    //     setIsRegistered(true);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   });
-  // };
-  
+    let config = {
+      method: "post",
+      url: "http://localhost:4000/auth/register",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: formData,
+    };
+
+    axios(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+        setIsRegistered(true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <>
-      {/* {isRegistered && (
-        <Alert
-          message="User Registered Successfully"
-          type="success"
-          showIcon
-          onClose={() => setIsRegistered(false)}
-          closable
-          closeIcon={<CloseOutlined />}
-        />
-      )} */}
+      <div>
+        <Breadcrumb />
+      </div>
       <div id="register">
         <Row>
           <Col span={12} className="register-form">
+            {isRegistered && (
+              <Alert
+                message="User Registered Successfully"
+                type="success"
+                showIcon
+                onClose={() => setIsRegistered(false)}
+                closable
+                closeIcon={<CloseOutlined />}
+              />
+            )}
             <Title level={1}>REGISTER</Title>
             <Form
               name="normal_register"
@@ -62,7 +76,7 @@ function Register() {
                 <b>Name</b>
               </label>
               <Form.Item
-                name="username"
+                name="name"
                 rules={[
                   {
                     required: true,
@@ -111,7 +125,12 @@ function Register() {
                 />
               </Form.Item>
               <Form.Item>
-                <Form.Item name="remember" className="termsandconditions" valuePropName="checked" noStyle>
+                <Form.Item
+                  name="remember"
+                  className="termsandconditions"
+                  valuePropName="checked"
+                  noStyle
+                >
                   <Checkbox>I Agree Terms and Conditions</Checkbox>
                 </Form.Item>
               </Form.Item>

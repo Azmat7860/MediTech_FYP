@@ -47,7 +47,7 @@ const Home = () => {
             <div className="filter_form bg-white shadow-lg">
               <form method="GET">
                 <div className="row mx-n2 d-flex align-items-center">
-                  <div className="col-12 col-md col-lg-5 d-flex flex-column my-1 px-2">
+                  <div className="col-12 col-md col-lg-5 d-flex flex-column my-1 px-3">
                     <div className="form-group-overlay first">
                       <label htmlFor="locations">Location</label>
                       <input
@@ -61,7 +61,7 @@ const Home = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-12 col-md col-lg-5 d-flex flex-column my-1 px-2">
+                  <div className="col-12 col-md col-lg-5 d-flex flex-column my-1 px-3">
                     <div className="form-group-overlay">
                       <label htmlFor="doctors">Doctor</label>
                       <input

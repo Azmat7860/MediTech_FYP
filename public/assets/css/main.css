@@ -436,8 +436,8 @@ section {
   .navbar .dropdown ul .active,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: var(--color-white);
-    background: var(--color-secondary);
+    color: var(--color-default);
+    color: var(--color-green);
   }
 
   .navbar .dropdown:hover>ul {
@@ -590,7 +590,7 @@ section {
 
   .mobile-nav-toggle {
     display: block !important;
-    color: var(--color-secondary);
+    color: var(--color-white);
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
@@ -940,7 +940,7 @@ input[type=button].btn-block {
     position: inherit;
     transform: inherit;
     height: 20px;
-    padding: 0 0 0 15px;
+    padding: 0;
     margin: 0;
   }
 

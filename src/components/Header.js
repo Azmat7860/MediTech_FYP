@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -106,8 +106,6 @@ const Header = () => {
               </ul>
             </li>
 
-            {/* <li><Link className="nav-link scrollto" to="index.html#about">About</Link></li> */}
-            {/* <li><Link className="nav-link scrollto" to="index.html#services">Services</Link></li> */}
             <li className="dropdown megamenu">
               <Link to="/">
                 <span>Medical Stores</span>
@@ -235,14 +233,21 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <Link to="/blogs">Health Blogs</Link>
+              <NavLink to="/blogs">Health Blogs</NavLink>
             </li>
-            {/* <li><Link className="nav-link scrollto" to="index.html#contact">Contact</Link></li> */}
             <li>
-              <Link className="btn-auth scrollto" to="/login">
+              <NavLink className="btn-auth scrollto" to="/login">
                 Login/Signup
-              </Link>
+              </NavLink>
             </li>
+            <li class="dropdown"><a href="/"><span>More</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="/">Join as Doctor</a></li>
+                  <li><a href="/">Join as Caretaker</a></li>
+                  <li><a href="/">Register Medical Lab</a></li>
+                  <li><a href="/">Register Medical Store</a></li>
+                </ul>
+              </li>
           </ul>
           <i className="bi bi-list mobile-nav-toggle d-none"></i>
         </nav>
