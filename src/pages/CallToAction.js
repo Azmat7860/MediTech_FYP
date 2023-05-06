@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const CallToAction = () => {
   return (
@@ -16,14 +17,14 @@ const CallToAction = () => {
                 cupidatat non proident, sunt in culpa qui officia deserunt
                 mollit anim id est laborum.
               </p>
-              <a class="cta-btn align-self-start" href="/">
+              <NavLink className="cta-btn align-self-start" to="/">
                 Book Appointment
-              </a>
+              </NavLink>
             </div>
 
             <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
               <div class="img">
-                <img src="assets/img/cta.jpg" alt="" class="img-fluid" />
+                <img src="assets/img/cta.jpg" alt="..." class="img-fluid" />
               </div>
             </div>
           </div>

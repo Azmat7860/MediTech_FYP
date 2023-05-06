@@ -1,5 +1,6 @@
 import React from 'react'
 import {Card} from "antd";
+import { Link } from 'react-router-dom';
 
 
 const TopSpecialist = () => {
@@ -15,7 +16,7 @@ const TopSpecialist = () => {
           <section className="bg-white mt-2 pb-3 mb-2">
             <div className="col-12 text-center">
               <p className="fs-5">
-              <span className="fw-bold">150+</span> Top Specialists
+              <span className="fw-bold">100+</span> Top Specialists
               </p>
             </div>
             <div className="our-services section-pad-t30">
@@ -24,7 +25,7 @@ const TopSpecialist = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-tour"></span>
+                        <span className="flaticon-tour"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -36,7 +37,7 @@ const TopSpecialist = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-cms"></span>
+                        <span className="flaticon-cms"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -48,7 +49,7 @@ const TopSpecialist = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-report"></span>
+                        <span className="flaticon-report"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -60,7 +61,7 @@ const TopSpecialist = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-app"></span>
+                        <span className="flaticon-app"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -72,7 +73,7 @@ const TopSpecialist = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-helmet"></span>
+                        <span className="flaticon-helmet"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -84,7 +85,7 @@ const TopSpecialist = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-high-tech"></span>
+                        <span className="flaticon-high-tech"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -96,7 +97,7 @@ const TopSpecialist = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-real-estate"></span>
+                        <span className="flaticon-real-estate"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -108,7 +109,7 @@ const TopSpecialist = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-content"></span>
+                        <span className="flaticon-content"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -122,12 +123,12 @@ const TopSpecialist = () => {
             </div>
           </section>
           <div className="col-md-12 text-center show-link mt-2">
-            <a
-              href="https://www.marham.pk/all-diseases"
+            <Link
+              to="/speciality"
               className="btn btn-primary btn-sm semi-round"
             >
               View All Specialists
-            </a>
+            </Link>
           </div>
         </Card>
       </div>

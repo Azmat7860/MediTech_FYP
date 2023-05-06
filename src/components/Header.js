@@ -235,19 +235,19 @@ const Header = () => {
             <li>
               <NavLink to="/blogs">Health Blogs</NavLink>
             </li>
+            <li class="dropdown"><NavLink href="/"><span>More</span> <i class="bi bi-chevron-down dropdown-indicator"></i></NavLink>
+                <ul>
+                  <li><Link href="/">Join as Doctor</Link></li>
+                  <li><Link href="/">Join as Caretaker</Link></li>
+                  <li><Link href="/">Register Medical Lab</Link></li>
+                  <li><Link href="/">Register Medical Store</Link></li>
+                </ul>
+              </li>
             <li>
               <NavLink className="btn-auth scrollto" to="/login">
                 Login/Signup
               </NavLink>
             </li>
-            <li class="dropdown"><a href="/"><span>More</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="/">Join as Doctor</a></li>
-                  <li><a href="/">Join as Caretaker</a></li>
-                  <li><a href="/">Register Medical Lab</a></li>
-                  <li><a href="/">Register Medical Store</a></li>
-                </ul>
-              </li>
           </ul>
           <i className="bi bi-list mobile-nav-toggle d-none"></i>
         </nav>

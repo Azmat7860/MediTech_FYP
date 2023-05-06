@@ -1,5 +1,6 @@
 import React from "react";
 import Breadcrumb from "../../components/Breadcrumb";
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
   return (
@@ -24,9 +25,9 @@ const Blogs = () => {
                   <p class="post-category">Politics</p>
 
                   <h2 class="title">
-                    <a href="blog-details.html">
+                    <Link to="/blog-item">
                       Dolorum optio tempore voluptas dignissimos
-                    </a>
+                    </Link>
                   </h2>
 
                   <div class="d-flex align-items-center">
@@ -58,9 +59,9 @@ const Blogs = () => {
                   <p class="post-category">Sports</p>
 
                   <h2 class="title">
-                    <a href="blog-details.html">
+                    <Link to="/blog-item">
                       Nisi magni odit consequatur autem nulla dolorem
-                    </a>
+                    </Link>
                   </h2>
 
                   <div class="d-flex align-items-center">
@@ -92,9 +93,9 @@ const Blogs = () => {
                   <p class="post-category">Entertainment</p>
 
                   <h2 class="title">
-                    <a href="blog-details.html">
+                    <Link to="/blog-item">
                       Possimus soluta ut id suscipit ea ut in quo quia et soluta
-                    </a>
+                    </Link>
                   </h2>
 
                   <div class="d-flex align-items-center">
@@ -126,9 +127,9 @@ const Blogs = () => {
                   <p class="post-category">Sports</p>
 
                   <h2 class="title">
-                    <a href="blog-details.html">
+                    <Link to="/blog-item">
                       Non rem rerum nam cum quo minus olor distincti
-                    </a>
+                    </Link>
                   </h2>
 
                   <div class="d-flex align-items-center">
@@ -160,9 +161,9 @@ const Blogs = () => {
                   <p class="post-category">Politics</p>
 
                   <h2 class="title">
-                    <a href="blog-details.html">
+                    <Link to="/blog-item">
                       Accusamus quaerat aliquam qui debitis facilis consequatur
-                    </a>
+                    </Link>
                   </h2>
 
                   <div class="d-flex align-items-center">
@@ -194,9 +195,9 @@ const Blogs = () => {
                   <p class="post-category">Entertainment</p>
 
                   <h2 class="title">
-                    <a href="blog-details.html">
+                    <Link to="/blog-item">
                       Distinctio provident quibusdam numquam aperiam aut
-                    </a>
+                    </Link>
                   </h2>
 
                   <div class="d-flex align-items-center">
@@ -219,13 +220,13 @@ const Blogs = () => {
             <div class="blog-pagination">
               <ul class="justify-content-center">
                 <li>
-                  <a href="/">1</a>
+                  <Link to="/">1</Link>
                 </li>
                 <li class="active">
-                  <a href="/">2</a>
+                  <Link to="/">2</Link>
                 </li>
                 <li>
-                  <a href="/">3</a>
+                  <Link to="/">3</Link>
                 </li>
               </ul>
             </div>

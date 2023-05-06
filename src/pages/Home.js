@@ -11,6 +11,7 @@ import Feedback from './Feedback';
 import Partner from './Partner';
 import RecentBlogs from './Health Blog/RecentBlogs';
 import Services from './Services';
+import TopMedicine from "./TopMedicine";
 
 
 const Home = () => {
@@ -89,6 +90,7 @@ const Home = () => {
       </section>
       <HorizontalCards />
       <TopSpecialist />
+      <TopMedicine/>
       <TopDisease />
       <CallToAction />
       <Step />
