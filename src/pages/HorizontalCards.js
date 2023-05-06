@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import SpecialityModal from "../components/SpecialityModal";
 
 const HorizontalCards = () => {
+  const [appointment, setAppoinment] = useState(false)
   return (
     <div>
+      <SpecialityModal appointment={appointment}/>
       <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
           <div class="row">
@@ -19,7 +22,7 @@ const HorizontalCards = () => {
                   <h4>Find and Book Appointment</h4>
                   <span>1000+ PMC Verified Doctors</span>
                   <p>
-                    <a className="btn-appointment" href="index.html#about">
+                    <a className="btn-appointment" href="/" onClick={()=>{setAppoinment(true)}} data-bs-toggle="modal" data-bs-target="#exampleModal">
                       Book Appointment
                     </a>
                   </p>
@@ -46,7 +49,8 @@ const HorizontalCards = () => {
                   <p>
                     <a
                       className="btn-video-consultation"
-                      href="index.html#about"
+                      href="/"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal"
                     >
                       Video Consultation
                     </a>
@@ -68,7 +72,7 @@ const HorizontalCards = () => {
                   <h4>Book Lab Test</h4>
                   <span>Book Lab Test from the Top Laboraties of Pakistan</span>
                   <p>
-                    <a className="btn-lab-test" href="index.html#about">
+                    <a className="btn-lab-test" href="/" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       Get Started
                     </a>
                   </p>
@@ -91,7 +95,7 @@ const HorizontalCards = () => {
                   <p>
                     <a
                       className="btn-video-consultation"
-                      href="index.html#about"
+                      href="/medicine"
                     >
                       Get Started
                     </a>

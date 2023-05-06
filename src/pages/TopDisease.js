@@ -24,7 +24,7 @@ const TopDisease = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-tour"></span>
+                        <span className="flaticon-tour"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -36,7 +36,7 @@ const TopDisease = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-cms"></span>
+                        <span className="flaticon-cms"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -48,7 +48,7 @@ const TopDisease = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-report"></span>
+                        <span className="flaticon-report"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -60,7 +60,7 @@ const TopDisease = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-app"></span>
+                        <span className="flaticon-app"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -72,7 +72,7 @@ const TopDisease = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-helmet"></span>
+                        <span className="flaticon-helmet"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -84,7 +84,7 @@ const TopDisease = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-high-tech"></span>
+                        <span className="flaticon-high-tech"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -96,7 +96,7 @@ const TopDisease = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-real-estate"></span>
+                        <span className="flaticon-real-estate"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>
@@ -108,7 +108,7 @@ const TopDisease = () => {
                   <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                     <div className="single-services text-center mb-30">
                       <div className="services-ion">
-                        <span className="flaticon-content"></span>
+                        <span className="flaticon-content"><i class="bi bi-android2"></i></span>
                       </div>
                       <div className="services-cap">
                         <h5>

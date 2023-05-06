@@ -130,6 +130,7 @@ section {
   color: #37517e;
 }
 
+
 .section-title h2::before {
   content: "";
   position: absolute;
@@ -142,6 +143,38 @@ section {
 }
 
 .section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #47b2e4;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title h3 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #37517e;
+}
+
+.section-title h3::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h3::after {
   content: "";
   position: absolute;
   display: block;
@@ -398,8 +431,8 @@ section {
   .navbar .dropdown .active:focus,
   .navbar .dropdown:hover>a {
     color: var(--color-white);
-    color: var(--color-green);
-    border-radius: 2px;
+    /* color: var(--color-green); */
+    /* border-radius: 2px; */
   }
 
   .navbar .dropdown ul {
@@ -436,8 +469,8 @@ section {
   .navbar .dropdown ul .active,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: var(--color-white);
-    background: var(--color-secondary);
+    color: var(--color-default);
+    color: var(--color-green);
   }
 
   .navbar .dropdown:hover>ul {
@@ -590,7 +623,7 @@ section {
 
   .mobile-nav-toggle {
     display: block !important;
-    color: var(--color-secondary);
+    color: var(--color-white);
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
@@ -940,7 +973,7 @@ input[type=button].btn-block {
     position: inherit;
     transform: inherit;
     height: 20px;
-    padding: 0 0 0 15px;
+    padding: 0;
     margin: 0;
   }
 
