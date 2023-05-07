@@ -17,6 +17,7 @@ import { useState } from "react";
 import { authContext } from "./context/authContext";
 import Medicine from "./pages/Medicine";
 import Speciality from "./pages/Speciality";
+import Doctor from "./pages/Doctor";
 
 function App() {
   useEffect(() => {
@@ -64,6 +65,7 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blog-item" element={<BlogItems />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/doctor" element={<Doctor />} />
           <Route path="/medicine" element={<Medicine />} />
           <Route path="/speciality" element={<Speciality />} />
           <Route path="/login" element={<Login />} />
