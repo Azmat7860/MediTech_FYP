@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MedicineCard = () => {
   return (
     <div>
-      <div class="card h-100 my-5" style={{ width: "18rem"}}>
+      <div class="card h-100 my-3">
         <img src="..." class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -11,9 +12,11 @@ const MedicineCard = () => {
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="/" class="btn btn-success">
+        </div>
+        <div class="card-footer">
+          <Link to="/" class="btn btn-success">
             Read More
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -15,8 +15,7 @@ const Breadcrumb = () => {
                   <p>
                     Odio et unde deleniti. Deserunt numquam exercitationem.
                     Officiis quo odio sint voluptas consequatur ut a odio
-                    voluptatem. Sit dolorum debitis veritatis natus dolores.
-                    Quasi ratione sint. Sit quaerat ipsum dolorem.
+                    voluptatem.
                   </p>
                 </div>
               </div>

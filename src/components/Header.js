@@ -17,7 +17,7 @@ const Header = () => {
         <nav id="navbar" className="navbar">
           <ul>
             <li className="dropdown megamenu">
-              <Link to="/">
+              <Link to="/doctor">
                 <span>Doctors</span>
                 <i className="bi bi-chevron-down dropdown-indicator"></i>
               </Link>
@@ -25,25 +25,25 @@ const Header = () => {
                 <li>
                   <h5 className="text-success">Find doctor by speciality</h5>
 
-                  <Link to="/">Neuro Surgeon</Link>
+                  <Link to="/doctor">Neuro Surgeon</Link>
 
-                  <Link to="/">Dermatologist</Link>
+                  <Link to="/doctor">Dermatologist</Link>
 
-                  <Link to="/">Neurologist</Link>
+                  <Link to="/doctor">Neurologist</Link>
 
-                  <Link to="/">Gynecologist</Link>
+                  <Link to="/doctor">Gynecologist</Link>
 
-                  <Link to="/">Urologist</Link>
+                  <Link to="/doctor">Urologist</Link>
 
-                  <Link to="/">Gastroenterologist</Link>
+                  <Link to="/doctor">Gastroenterologist</Link>
 
-                  <Link to="/">General Physician</Link>
+                  <Link to="/doctor">General Physician</Link>
 
-                  <Link to="/">Sexologist</Link>
+                  <Link to="/doctor">Sexologist</Link>
 
-                  <Link to="/">Eye Surgeon</Link>
+                  <Link to="/doctor">Eye Surgeon</Link>
 
-                  <Link to="/">View All Specialities</Link>
+                  <Link to="/doctor">View All Specialities</Link>
                 </li>
                 <li>
                   <h5 className="text-success">Find Doctor by Disease</h5>
@@ -70,7 +70,7 @@ const Header = () => {
                     Anal Fissurefistula
                   </Link>
                   <Link to="https://www.marham.pk/all-diseases/male-sexual-dysfunction">
-                    Male Sexual Dysfunction{" "}
+                    Male Sexual Dysfunction
                   </Link>
                   <Link to="https://www.marham.pk/all-diseases">View All</Link>
                 </li>
