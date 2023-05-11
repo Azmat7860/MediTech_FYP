@@ -108,6 +108,12 @@ export function init() {
     }
   });
 
+  const scrollBtn = document.getElementById("scrollBtn");
+
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   /**
    * Mobile nav toggle
    */

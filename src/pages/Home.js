@@ -1,7 +1,5 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-// import { init } from "../js/main";
-// import Features from "./Features";
 import HorizontalCards from './HorizontalCards';
 import TopSpecialist from './TopSpecialist';
 import TopDisease from './TopDisease';
@@ -15,10 +13,7 @@ import TopMedicine from "./TopMedicine";
 
 
 const Home = () => {
-  // useEffect(() => {
-  //   // Call a function from the imported script
-  //   init();
-  // }, []);
+
   return (
     <div>
       <section

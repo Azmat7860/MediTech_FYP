@@ -6,7 +6,7 @@ const Blogs = () => {
   return (
     <div>
       <main id="main">
-        <Breadcrumb/>
+        <Breadcrumb title={"Blog"}/>
 
         {/* <!-- ======= Blog Section ======= --> */}
         <section id="blog" class="blog">

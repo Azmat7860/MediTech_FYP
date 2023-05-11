@@ -4,9 +4,10 @@ import Count from "./Count";
 import Breadcrumb from "../components/Breadcrumb";
 
 const About = () => {
+  document.documentElement.scrollTop = 0;
   return (
     <div>
-      <Breadcrumb/>
+      <Breadcrumb title={"About"}/>
       <section id="about" class="about">
         <div class="container" data-aos="fade-up">
           <div class="section-title">

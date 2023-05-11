@@ -8,11 +8,11 @@ const RecentBlogs = () => {
         <div class="container" data-aos="fade-up">
           <div class="section-title section-header">
             <h2>Recent Blog Posts</h2>
-            <p>
+            {/* <p>
               Consequatur libero assumenda est voluptatem est quidem illum et
               officia imilique qui vel architecto accusamus fugit aut qui
               distinctio
-            </p>
+            </p> */}
           </div>
 
           <div class="row gy-4">
@@ -70,7 +70,7 @@ const RecentBlogs = () => {
 
                 <div class="d-flex align-items-center">
                   <img
-                    src="assets/img/blog/blog-author-2.jpg"
+                    src="assets/img/blog/comments-2.jpg"
                     alt=""
                     class="img-fluid post-author-img flex-shrink-0"
                   />
@@ -104,7 +104,7 @@ const RecentBlogs = () => {
 
                 <div class="d-flex align-items-center">
                   <img
-                    src="assets/img/blog/blog-author-3.jpg"
+                    src="assets/img/blog/comments-3.jpg"
                     alt=""
                     class="img-fluid post-author-img flex-shrink-0"
                   />

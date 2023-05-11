@@ -9,10 +9,10 @@ const Contact = () => {
         <div className="container" data-aos="fade-up">
           <div className="section-header">
             <h2>Contact</h2>
-            <p>
+            {/* <p>
               Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam
               porro nihil id ratione ea sunt quis dolorem dolore earum
-            </p>
+            </p> */}
           </div>
 
           <div className="row gx-lg-0 gy-4">
@@ -99,7 +99,7 @@ const Contact = () => {
                   <textarea
                     className="form-control"
                     name="message"
-                    rows="7"
+                    rows="10"
                     placeholder="Message"
                     required
                   ></textarea>
