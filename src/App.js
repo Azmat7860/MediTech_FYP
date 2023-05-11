@@ -1,14 +1,13 @@
 import "./App.css";
 import { useEffect } from "react";
 import { init } from "./js/main";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Faq from "./pages/Faq";
 import Footer from "./components/Footer";
-// import PlatinumDoctors from "./pages/PlatinumDoctors";
 import Blogs from "./pages/Health Blog/Blogs";
 import BlogItems from "./pages/Health Blog/BlogItems";
 import Login from "./pages/Auth/Login";
@@ -25,6 +24,7 @@ function App() {
     init();
   }, []);
 
+  const [apiEndpoint, setApiEndpoint] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   function login() {
     setIsLoggedIn(true);
@@ -47,16 +47,16 @@ function App() {
       value={{ isLoggedIn, login, logout, setUser, clearUser, userData }}
     >
       <>
-        <a
-          href="/"
+        <Link
+          id="scrollBtn"
           class="scroll-top d-flex align-items-center justify-content-center"
         >
           <i class="bi bi-arrow-up-short"></i>
-        </a>
+        </Link>
 
         <div id="preloader"></div>
 
-        <Header />
+        <Header apiEndpoint={apiEndpoint} setApiEndpoint={setApiEndpoint}/>
 
         <Routes>
           <Route path="/" element={<Home />} />
