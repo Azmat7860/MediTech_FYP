@@ -7,9 +7,11 @@ import {
 } from "@ant-design/icons";
 import { Form, Input } from "antd";
 import axios from "axios";
-
+import { useNavigate } from "react-router";
 const DoctorModal = ({ apiEndpoint }) => {
   console.log(apiEndpoint);
+
+  const navigate = useNavigate();
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
@@ -42,6 +44,7 @@ const DoctorModal = ({ apiEndpoint }) => {
       .request(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
+        navigate("/user-login");
       })
       .catch((error) => {
         console.log(error);

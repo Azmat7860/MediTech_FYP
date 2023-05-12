@@ -17,6 +17,7 @@ import { authContext } from "./context/authContext";
 import Medicine from "./pages/Medicine";
 import Speciality from "./pages/Speciality";
 import Doctor from "./pages/Doctor";
+import UserLogin from "./pages/UserLogin";
 
 function App() {
   useEffect(() => {
@@ -70,6 +71,7 @@ function App() {
           <Route path="/speciality" element={<Speciality />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/user-login" element={<UserLogin />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
