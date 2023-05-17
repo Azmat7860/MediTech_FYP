@@ -23,15 +23,15 @@ import Dashboard from "./user/pages/Dashboard";
 import Sidebar from "./user/layout/Sidebar";
 import UserHeader from "./user/layout/Header";
 import UserFooter from "./user/layout/Footer";
-import Appointment from "./user/pages/Appointment";
-import Patient from "./user/pages/Patient";
+import UserAppointment from "./user/pages/Appointment";
+import UserPatient from "./user/pages/Patient";
 import UserDoctor from "./user/pages/Doctor";
-import Caretaker from "./user/pages/Caretaker";
+import UserCaretaker from "./user/pages/Caretaker";
 import UserMedicalStore from "./user/pages/MedicalStore";
-import Lab from "./user/pages/Lab";
-import Blog from "./user/pages/Blog";
-import Profile from "./user/pages/Profile";
-import Logout from "./user/auth/Logout";
+import UserLab from "./user/pages/Lab";
+import UserBlog from "./user/pages/Blog";
+import UserProfile from "./user/pages/Profile";
+import UserLogout from "./user/auth/Logout";
 
 function App() {
   useEffect(() => {
@@ -79,15 +79,15 @@ function App() {
             <Sidebar />
             <Routes>
               <Route path="/user-dashboard" element={<Dashboard />} />
-              <Route path="/appointment" element={<Appointment />} />
-              <Route path="/patient" element={<Patient />} />
-              <Route path="/doctor" element={<UserDoctor />} />
-              <Route path="/caretaker" element={<Caretaker />} />
+              <Route path="/user-appointment" element={<UserAppointment />} />
+              <Route path="/user-patient" element={<UserPatient />} />
+              <Route path="/user-doctor" element={<UserDoctor />} />
+              <Route path="/user-caretaker" element={<UserCaretaker />} />
               <Route path="/user-medicalstore" element={<UserMedicalStore />} />
-              <Route path="/lab" element={<Lab />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/logout" element={<Logout />} />
+              <Route path="/user-lab" element={<UserLab />} />
+              <Route path="/user-blog" element={<UserBlog />} />
+              <Route path="/user-profile" element={<UserProfile />} />
+              <Route path="/user-logout" element={<UserLogout />} />
               <Route
                 path="*"
                 element={<Navigate to="/user-dashboard" replace />}
