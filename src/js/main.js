@@ -1,5 +1,3 @@
-
-
 export function init() {
   // document.addEventListener('DOMContentLoaded', () => {
   // "use strict";

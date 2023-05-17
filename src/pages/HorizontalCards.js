@@ -13,7 +13,7 @@ const HorizontalCards = () => {
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="assets/img/team/team-1.jpg"
+                    src="assets/img/team/doctor-1.webp"
                     class="img-fluid"
                     alt=""
                   />
@@ -38,7 +38,7 @@ const HorizontalCards = () => {
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="assets/img/team/team-2.jpg"
+                    src="assets/img/team/doctor-2.1.jpg"
                     class="img-fluid"
                     alt=""
                   />
@@ -63,7 +63,7 @@ const HorizontalCards = () => {
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="assets/img/team/team-3.jpg"
+                    src="assets/img/team/doctor-3.jpg"
                     class="img-fluid"
                     alt=""
                   />
@@ -84,7 +84,7 @@ const HorizontalCards = () => {
               <div class="member d-flex align-items-start">
                 <div class="pic">
                   <img
-                    src="assets/img/team/team-4.jpg"
+                    src="assets/img/team/doctor-4.jpg"
                     class="img-fluid"
                     alt=""
                   />

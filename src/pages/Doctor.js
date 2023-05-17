@@ -1,20 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DoctorCard from "./../components/DoctorCard";
 import Breadcrumb from "./../components/Breadcrumb";
 import { Link } from "react-router-dom";
-
+import axios from 'axios';
 const Doctor = () => {
-  const [cards, setCards] = useState(Array(10).fill(null));
+  const [specialists, setSpecialists] = useState([]);
 
+  console.log(specialists)
+  useEffect(() => {
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: "http://localhost:4000/api/doctor/",
+      headers: {},
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+        setSpecialists(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div>
       <Breadcrumb />
       <div id="doctor" className="section-bg mt-3">
         <div className="container">
           <div className="row">
-            {cards.map((_, index) => (
-              <div key={index}>
-                <DoctorCard />
+          {specialists.map((item, key) => (
+              <div key={key}>
+                <DoctorCard key={item._id} id={item._id} name={item.name} speciality={item.speciality} />
               </div>
             ))}
             <div class="blog-pagination">

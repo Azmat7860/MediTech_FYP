@@ -8,9 +8,14 @@ import {
 import { Form, Input } from "antd";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 const DoctorModal = ({ apiEndpoint }) => {
   console.log(apiEndpoint);
 
+  let doctorApi = "http://localhost:4000/doctorAuth/register";
+  let caretakerApi = "http://localhost:4000/caretakerAuth/register";
+  let labApi = "http://localhost:4000/labAuth/register";
+  let medicalstoreApi = "http://localhost:4000/medicalStoreAuth/register";
   const navigate = useNavigate();
   const [form] = Form.useForm();
 
@@ -24,8 +29,7 @@ const DoctorModal = ({ apiEndpoint }) => {
     formData.append("address", values.address);
     // eslint-disable-next-line no-lone-blocks
     {
-      apiEndpoint === "http://localhost:4000/doctorAuth/register" ||
-      apiEndpoint === "http://localhost:4000/caretakerAuth/register"
+      apiEndpoint === doctorApi || apiEndpoint === caretakerApi
         ? formData.append("speciality", values.speciality)
         : formData.append("certificate", values.certificate);
     }
@@ -44,7 +48,7 @@ const DoctorModal = ({ apiEndpoint }) => {
       .request(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
-        navigate("/user-login");
+        navigate("/userlogin");
       })
       .catch((error) => {
         console.log(error);
@@ -63,9 +67,26 @@ const DoctorModal = ({ apiEndpoint }) => {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header bg-success text-white">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Sign up as Doctor
-              </h5>
+              {apiEndpoint === doctorApi && (
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Sign up as Doctor
+                </h5>
+              )}
+              {apiEndpoint === caretakerApi && (
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Sign up as Caretaker
+                </h5>
+              )}
+              {apiEndpoint === labApi && (
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Register your Lab
+                </h5>
+              )}
+              {apiEndpoint === medicalstoreApi && (
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Register your Medical Store
+                </h5>
+              )}
               <button
                 type="button"
                 class="btn-close"
@@ -160,8 +181,7 @@ const DoctorModal = ({ apiEndpoint }) => {
                   />
                 </Form.Item>
 
-                {apiEndpoint ===
-                  "http://localhost:4000/doctorAuth/register" && (
+                {apiEndpoint === doctorApi && (
                   <Form.Item
                     name="speciality"
                     //   label="City"
@@ -179,8 +199,7 @@ const DoctorModal = ({ apiEndpoint }) => {
                   </Form.Item>
                 )}
 
-                {apiEndpoint ===
-                  "http://localhost:4000/caretakerAuth/register" && (
+                {apiEndpoint === caretakerApi && (
                   <Form.Item
                     name="speciality"
                     //   label="City"
@@ -198,7 +217,7 @@ const DoctorModal = ({ apiEndpoint }) => {
                   </Form.Item>
                 )}
 
-                {apiEndpoint === "http://localhost:4000/labAuth/register" && (
+                {apiEndpoint === labApi && (
                   <Form.Item
                     name="cetificate"
                     //   label="City"
@@ -215,8 +234,7 @@ const DoctorModal = ({ apiEndpoint }) => {
                     />
                   </Form.Item>
                 )}
-                {apiEndpoint ===
-                  "http://localhost:4000/medicalStoreAuth/register" && (
+                {apiEndpoint === medicalstoreApi && (
                   <Form.Item
                     name="cetificate"
                     //   label="City"
@@ -233,6 +251,12 @@ const DoctorModal = ({ apiEndpoint }) => {
                     />
                   </Form.Item>
                 )}
+                <div class="col-12">
+                  <p class="mb-0">
+                    Already have an account?
+                    <Link to="/userLogin" className="text-success">&nbsp;Log in</Link>
+                  </p>
+                </div>
 
                 <div className="d-flex flex-row-reverse">
                   <button
