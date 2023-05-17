@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "antd";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCoffee, faStar, faHeart } from '@fortawesome/free-solid-svg-icons';
+
 
 const SpecialityModal = () => {
+  const [specialists, setSpecialists] = useState([]);
+  library.add(faCoffee, faStar, faHeart);
+
+  useEffect(() => {
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: "http://localhost:4000/api/doctor/",
+      headers: {},
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+        setSpecialists(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div>
-      {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button> */}
-
       <div
         class="modal fade"
         id="exampleModal"
@@ -19,7 +42,7 @@ const SpecialityModal = () => {
           <div class="modal-content">
             <div class="modal-header text-white text-center bg-success">
               <h5 class="modal-title" id="exampleModalLabel">
-              Book Appointment with PMC verified Doctors
+                Book Appointment with PMC verified Doctors
               </h5>
               <button
                 type="button"
@@ -30,245 +53,15 @@ const SpecialityModal = () => {
             </div>
             <div class="modal-body">
               <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-              </Row>
-              <Row gutter={16}>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
-                <Col span={8}>
-                  <Card bordered={true}>
-                  <i class="bi bi-android2"></i>&nbsp;
-                    Card content
-                  </Card>
-                </Col>
+                {specialists.map((item, key) => (
+                  <Col span={8} key={key}>
+                    <Card bordered={true}>
+                    <FontAwesomeIcon icon={item.icon} />&nbsp;
+                      <i class="bi bi-android2"></i>
+                      <Link to="/doctor">{item.speciality}</Link>
+                    </Card>
+                  </Col>
+                ))}
               </Row>
             </div>
           </div>

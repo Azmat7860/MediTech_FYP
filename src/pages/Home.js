@@ -1,8 +1,8 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import HorizontalCards from './HorizontalCards';
-import TopSpecialist from './TopSpecialist';
-import TopDisease from './TopDisease';
+// import TopSpecialist from './TopSpecialist';
+// import TopDisease from './TopDisease';
 import CallToAction from './CallToAction';
 import Step from './Step';
 import Feedback from './Feedback';
@@ -84,9 +84,9 @@ const Home = () => {
         </div>
       </section>
       <HorizontalCards />
-      <TopSpecialist />
+      {/* <TopSpecialist /> */}
       <TopMedicine/>
-      <TopDisease />
+      {/* <TopDisease /> */}
       <CallToAction />
       <Step />
       <Feedback />

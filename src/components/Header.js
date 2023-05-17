@@ -26,7 +26,7 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
   
   return (
     <>
-      <DoctorModal doctor={doctor} apiEndpoint={apiEndpoint} />
+      <DoctorModal doctor={doctor} setDoctor={setDoctor} apiEndpoint={apiEndpoint} />
       <header id="header" className="header fixed-top" data-scrollto-offset="0">
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <Link
@@ -34,7 +34,7 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
             className="logo d-flex align-items-center scrollto me-auto me-lg-0"
           >
             {/* <!-- Uncomment the line below if you also wish to use an image logo --> */}
-            {/* <img src="assets/img/MediTech_Logo.png" alt="..."/>  */}
+            {/* <img src="assets/img/Logo.png" alt="..."/>  */}
             <h1>MediTech</h1>
           </Link>
 
@@ -55,15 +55,7 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
 
                     <Link to="/doctor">Neurologist</Link>
 
-                    <Link to="/doctor">Gynecologist</Link>
-
                     <Link to="/doctor">Urologist</Link>
-
-                    <Link to="/doctor">Gastroenterologist</Link>
-
-                    <Link to="/doctor">General Physician</Link>
-
-                    <Link to="/doctor">Sexologist</Link>
 
                     <Link to="/doctor">Eye Surgeon</Link>
 
@@ -71,67 +63,43 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                   </li>
                   <li>
                     <h5 className="text-success">Find Doctor by Disease</h5>
-                    <Link to="https://www.marham.pk/all-diseases/male-sexual-dysfunction">
-                      Male Sexual Dysfunction
-                    </Link>
-                    <Link to="https://www.marham.pk/all-diseases/polycystic-ovary-syndrome">
-                      Polycystic Ovary Syndrome
-                    </Link>
-                    <Link to="https://www.marham.pk/all-diseases/migraine">
+                    <Link to="/doctor">
                       Migraine
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases/hernia">
+                    <Link to="/doctor">
                       Hernia
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases/fungal-nail-infection">
+                    <Link to="/doctor">
                       Fungal Nail Infection
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases/premature-ejaculation">
+                    <Link to="/doctor">
                       Premature Ejaculation
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases/growth-disorders">
+                    <Link to="/doctor">
                       Growth Disorders
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases/anal-fissurefistula">
-                      Anal Fissurefistula
-                    </Link>
-                    <Link to="https://www.marham.pk/all-diseases/male-sexual-dysfunction">
-                      Male Sexual Dysfunction
-                    </Link>
-                    <Link to="https://www.marham.pk/all-diseases">
+                    <Link to="/doctor">
                       View All
                     </Link>
                   </li>
                   <li>
                     <h5 className="text-success">Find Doctor via City</h5>
-                    <Link to="https://www.marham.pk/all-diseases/male-sexual-dysfunction">
+                    <Link to="/doctor">
                       Best Doctors in Lahore
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases/male-sexual-dysfunction">
-                      Best Doctors in Rawalpindi
-                    </Link>
-                    <Link to="https://www.marham.pk/all-diseases/polycystic-ovary-syndrome">
+                    <Link to="/doctor">
                       Best Doctors in Quetta
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases/migraine">
+                    <Link to="/doctor">
                       Best Doctors in Peshawar
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases/hernia">
-                      Best Doctors in Gujrat
-                    </Link>
-                    <Link to="https://www.marham.pk/all-diseases/fungal-nail-infection">
-                      Best Doctors in Hyderabad
-                    </Link>
-                    <Link to="https://www.marham.pk/all-diseases/premature-ejaculation">
-                      Best Doctors in Bahawalpur
-                    </Link>
-                    <Link to="https://www.marham.pk/all-diseases/growth-disorders">
+                    <Link to="/doctor">
                       Best Doctors in Karachi
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases/anal-fissurefistula">
-                      Best Doctors in Multan
+                    <Link to="/doctor">
+                      Best Doctors in Rahim Yar Khan
                     </Link>
-                    <Link to="https://www.marham.pk/all-diseases">
+                    <Link to="/doctor">
                       View All
                     </Link>
                   </li>
@@ -146,74 +114,49 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                 <ul>
                   <li>
                     <h5 className="text-success">Medical Stores in Pakistan</h5>
-                    <Link to="https://www.marham.pk/hospitals/lahore">
+                    <Link to="/medicalstore">
                       Medical Stores in Lahore
                     </Link>
 
-                    <Link to="https://www.marham.pk/hospitals/karachi">
+                    <Link to="/medicalstore">
                       Medical Stores in Karachi
                     </Link>
 
-                    <Link to="https://www.marham.pk/hospitals/islamabad">
+                    <Link to="/medicalstore">
                       Medical Stores in Islamabad
-                    </Link>
+                    </Link>     
 
-                    <Link to="https://www.marham.pk/hospitals/rawalpindi">
-                      Medical Stores in Rawalpindi
-                    </Link>
-
-                    <Link to="https://www.marham.pk/hospitals/faisalabad">
-                      Medical Stores in Faisalabad
-                    </Link>
-
-                    <Link to="https://www.marham.pk/hospitals/multan">
-                      Medical Stores in Multan
-                    </Link>
-
-                    <Link to="https://www.marham.pk/hospitals/peshawar">
+                    <Link to="/medicalstore">
                       Medical Stores in Peshawar
                     </Link>
 
-                    <Link to="https://www.marham.pk/hospitals/quetta">
+                    <Link to="/medicalstore">
                       Medical Stores in Quetta
                     </Link>
 
-                    <Link to="https://www.marham.pk/hospitals/bahawalpur">
-                      Medical Stores in Bahawalpur
-                    </Link>
-                    <Link to="https://www.marham.pk/hospitals">View All</Link>
+                    <Link to="/medicalstore">View All</Link>
                   </li>
                   <li>
                     <h5 className="text-success">
                       Medical Stores in Rahim Yar Khan
                     </h5>
-                    <Link to="https://www.marham.pk/hospitals/gujranwala">
+                    <Link to="/medicalstore">
                       Fazaldin Pharmacy
                     </Link>
-                    <Link to="https://www.marham.pk/hospitals/bahawalpur">
+                    <Link to="/medicalstore">
                       Asad Pharmacy
                     </Link>
-                    <Link to="https://www.marham.pk/hospitals/gujranwala">
+                    <Link to="/medicalstore">
                       Sawar Medical Store
                     </Link>
-                    <Link to="https://www.marham.pk/hospitals/bahawalpur">
+                    <Link to="/medicalstore">
                       Hammad Medical Store
                     </Link>
-                    <Link to="https://www.marham.pk/hospitals/bahawalpur">
+                    <Link to="/medicalstore">
                       Al-Shifa Medical Store
                     </Link>
-                    <h5>Medical Stores in Islamabad</h5>
-                    <Link to="https://www.marham.pk/hospitals/gujranwala">
-                      Fazaldin Pharmacy
-                    </Link>
-                    <Link to="https://www.marham.pk/hospitals/bahawalpur">
-                      Asad Pharmacy
-                    </Link>
-                    <Link to="https://www.marham.pk/hospitals/gujranwala">
-                      Sawar Medical Store
-                    </Link>
-                    <Link to="https://www.marham.pk/hospitals/bahawalpur">
-                      Hammad Medical Store
+                    <Link to="/medicalstore">
+                      View All
                     </Link>
                   </li>
                 </ul>
@@ -271,29 +214,29 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
               </li>
               <li class="dropdown">
                 <NavLink href="/">
-                  <span>More</span>{" "}
+                  <span>Register</span>
                   <i class="bi bi-chevron-down dropdown-indicator"></i>
                 </NavLink>
                 <ul>
                   <li>
                     <Link to={"/"} onClick={handleButtonDoctor} data-bs-toggle="modal" data-bs-target="#doctorModal">
-                      Join as Doctor
+                      As Doctor
                     </Link>
                   </li>
                   <li>
                     <Link to={"/"} onClick={handleButtonCaretaker} data-bs-toggle="modal" data-bs-target="#doctorModal">
-                      Join as Caretaker
+                      As Caretaker
                     </Link>
                   </li>
                   <li>
                     <Link to={"/"} onClick={handleButtonLab} data-bs-toggle="modal" data-bs-target="#doctorModal">
                       
-                      Register Medical Lab
+                      Medical Lab
                     </Link>
                   </li>
                   <li>
                     <Link to={"/"} onClick={handleButtonMedicalStore} data-bs-toggle="modal" data-bs-target="#doctorModal">
-                      Register Medical Store
+                      Medical Store
                     </Link>
                   </li>
                 </ul>
