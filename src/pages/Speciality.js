@@ -5,6 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 const Speciality = () => {
+  document.documentElement.scrollTop = 0;
   const [specialists, setSpecialists] = useState([]);
 
   console.log(specialists)
@@ -28,7 +29,7 @@ const Speciality = () => {
   }, []);
   return (
     <div>
-         <Breadcrumb />
+         <Breadcrumb title={"All Specialists"} />
       <section id="medicine" className="medicine section-bg mt-3">
         <div className="container">
           <div className="row">

@@ -4,6 +4,7 @@ import Breadcrumb from "./../components/Breadcrumb";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 const Doctor = () => {
+  document.documentElement.scrollTop = 0;
   const [specialists, setSpecialists] = useState([]);
 
   console.log(specialists)

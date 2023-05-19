@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumb from "../components/Breadcrumb";
 
 const Contact = () => {
+  document.documentElement.scrollTop = 0;
   return (
     <div>
       <Breadcrumb/>

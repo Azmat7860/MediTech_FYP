@@ -6,6 +6,11 @@ const TopMedicine = () => {
   const [medicines, setMedicines] = useState([]);
   console.log(medicines);
 
+  const capitalizeFirstLetter = (str) => {
+      return  str.slice(1,-1);
+      // + str.charAt(0).toUpperCase();
+  };
+
   useEffect(() => {
     let config = {
       method: "get",
@@ -52,7 +57,7 @@ const TopMedicine = () => {
 
                               <div className="services-cap">
                                 <h5>
-                                  <Link to="/medicine">{item.title}</Link>
+                                  <Link to="/medicine">{capitalizeFirstLetter(item.title)}</Link>
                                 </h5>
                               </div>
                             </div>

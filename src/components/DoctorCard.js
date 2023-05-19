@@ -6,7 +6,7 @@ const DoctorCard = ({id,name,speciality}) => {
  
   return (
     <div>
-      <AppointmentModal/>
+      <AppointmentModal id={id} name={name}/>
       <section id="doctor" className="doctor">
         <div class="card">
           <div class="row g-0">
@@ -37,18 +37,18 @@ const DoctorCard = ({id,name,speciality}) => {
                   </div>
                   <div class="px-4">
                     <p class="small text-muted mb-1">Experience</p>
-                    <p class="mb-0">976</p>
+                    <p class="mb-0">3 years</p>
                   </div>
                   <div>
                     <p class="small text-muted mb-1">Satisfaction</p>
-                    <p class="mb-0">8.5</p>
+                    <p class="mb-0">88.5%</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-md-3 my-4">
               <div>
-                <NavLink className="btn-appointment" to="/appointment-modal" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                <NavLink className="btn-appointment" to={`/${id}`} data-bs-toggle="modal" data-bs-target={`#appointmentModal${id}`}>
                   Book Appointment
                 </NavLink>
               </div>

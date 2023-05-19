@@ -13,6 +13,7 @@ import TopMedicine from "./TopMedicine";
 
 
 const Home = () => {
+  // document.documentElement.scrollTop = 0;
 
   return (
     <div>

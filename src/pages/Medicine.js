@@ -5,8 +5,14 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Medicine = () => {
+  document.documentElement.scrollTop = 0;
   const [medicinesdetail, setMedicinesDetail] = useState([]);
   console.log(medicinesdetail);
+
+  const capitalizeFirstLetter = (str) => {
+    return  str.slice(1,-1);
+    // + str.charAt(0).toUpperCase();
+};
 
   useEffect(() => {
     let config = {
@@ -28,13 +34,13 @@ const Medicine = () => {
   }, []);
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb title={"Medicines"}/>
       <section id="medicine" className="medicine section-bg mt-3">
         <div className="container">
           <div className="row">
             {medicinesdetail.map((item, key) => (
               <div key={key} className="col-sm-6 col-md-4 col-lg-3">
-                <MedicineCard key={item._id} id={item._id} title={item.title} description={item.description} image={item.medicine_image} />
+                <MedicineCard key={item._id} id={item._id} title={capitalizeFirstLetter(item.title)} description={item.description} image={item.medicine_image} />
               </div>
             ))}
           </div>

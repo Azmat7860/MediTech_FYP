@@ -5,6 +5,8 @@ import Breadcrumb from "../components/Breadcrumb";
 import MedicalStoreCard from "../components/MedicalStoreCard";
 
 const MedicalStore = () => {
+  document.documentElement.scrollTop = 0;
+
   const [medicalstores, setMedicalStores] = useState([]);
   console.log(medicalstores);
 
@@ -29,18 +31,18 @@ const MedicalStore = () => {
 
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb title={"Medical Stores"}/>
       <section id="medicine" className="medicine section-bg mt-3">
         <div className="container">
           <div className="row">
             {medicalstores.map((item, key) => (
               <div key={key} className="col-sm-6 col-md-4 col-lg-3">
                 <MedicalStoreCard
-                  key={item._id}
-                  id={item._id}
-                  title={item.title}
-                  description={item.description}
-                  image={item.medicine_image}
+                 key={item._id}
+                 id={item._id}
+                 name={item.name}
+                 address={item.address}
+                 certification={item.certificate}
                 />
               </div>
             ))}

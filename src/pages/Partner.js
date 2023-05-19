@@ -13,8 +13,7 @@ const Partner = () => {
           <div className="section-title text-center">
             <h2>Our Partners</h2>
             <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit.
+            Value driven & honest work ethic is our strength
             </p>
           </div>
         </div>

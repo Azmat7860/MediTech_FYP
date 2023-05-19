@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { init } from "./js/main";
 import { Routes, Route, Navigate, Link } from "react-router-dom";
 import { authContext } from "./context/authContext";
@@ -14,24 +14,25 @@ import BlogItems from "./pages/Health Blog/BlogItems";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Medicine from "./pages/Medicine";
-import MedicalStore from './pages/MedicalStore';
+import MedicalStore from "./pages/MedicalStore";
+import Lab from "./pages/Lab";
 import Speciality from "./pages/Speciality";
 import Doctor from "./pages/Doctor";
 import ULogin from "./user/auth/Login";
-import { userinit } from './user/js/user-main';
+import { userinit } from "./user/js/user-main";
 import Dashboard from "./user/pages/Dashboard";
 import Sidebar from "./user/layout/Sidebar";
 import UserHeader from "./user/layout/Header";
 import UserFooter from "./user/layout/Footer";
-import Appointment from "./user/pages/Appointment";
-import Patient from "./user/pages/Patient";
+import UserAppointment from "./user/pages/Appointment";
+import UserPatient from "./user/pages/Patient";
 import UserDoctor from "./user/pages/Doctor";
-import Caretaker from "./user/pages/Caretaker";
+import UserCaretaker from "./user/pages/Caretaker";
 import UserMedicalStore from "./user/pages/MedicalStore";
-import Lab from "./user/pages/Lab";
-import Blog from "./user/pages/Blog";
-import Profile from "./user/pages/Profile";
-import Logout from "./user/auth/Logout";
+import UserLab from "./user/pages/Lab";
+import UserBlog from "./user/pages/Blog";
+import UserProfile from "./user/pages/Profile";
+import UserLogout from "./user/auth/Logout";
 
 function App() {
   useEffect(() => {
@@ -43,6 +44,7 @@ function App() {
 
   const [apiEndpoint, setApiEndpoint] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   function login() {
     setIsLoggedIn(true);
   }
@@ -58,10 +60,28 @@ function App() {
   const clearUser = () => {
     setUserData(null);
   };
+  const [patientData, setPatientData] = useState(null);
+  const setPatient = (data) => {
+    console.log("API RESPONSE: " + data);
+    setPatientData(data);
+  };
+  const clearPatient = () => {
+    setUserData(null);
+  };
 
   return (
     <authContext.Provider
-      value={{ isLoggedIn, login, logout, setUser, clearUser, userData }}
+      value={{
+        isLoggedIn,
+        login,
+        logout,
+        setUser,
+        clearUser,
+        userData,
+        patientData,
+        setPatient,
+        clearPatient,
+      }}
     >
       <>
         <Link
@@ -79,15 +99,15 @@ function App() {
             <Sidebar />
             <Routes>
               <Route path="/user-dashboard" element={<Dashboard />} />
-              <Route path="/appointment" element={<Appointment />} />
-              <Route path="/patient" element={<Patient />} />
-              <Route path="/doctor" element={<UserDoctor />} />
-              <Route path="/caretaker" element={<Caretaker />} />
+              <Route path="/user-appointment" element={<UserAppointment />} />
+              <Route path="/user-patient" element={<UserPatient />} />
+              <Route path="/user-doctor" element={<UserDoctor />} />
+              <Route path="/user-caretaker" element={<UserCaretaker />} />
               <Route path="/user-medicalstore" element={<UserMedicalStore />} />
-              <Route path="/lab" element={<Lab />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/logout" element={<Logout />} />
+              <Route path="/user-lab" element={<UserLab />} />
+              <Route path="/user-blog" element={<UserBlog />} />
+              <Route path="/user-profile" element={<UserProfile />} />
+              <Route path="/user-logout" element={<UserLogout />} />
               <Route
                 path="*"
                 element={<Navigate to="/user-dashboard" replace />}
@@ -108,6 +128,7 @@ function App() {
               <Route path="/doctor" element={<Doctor />} />
               <Route path="/medicine" element={<Medicine />} />
               <Route path="/medicalstore" element={<MedicalStore />} />
+              <Route path="/lab" element={<Lab />} />
               <Route path="/speciality" element={<Speciality />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />

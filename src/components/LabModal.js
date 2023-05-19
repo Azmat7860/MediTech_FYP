@@ -2,20 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "antd";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faCoffee, faStar, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-
-const SpecialityModal = () => {
-  const [specialists, setSpecialists] = useState([]);
-  // library.add(faCoffee, faStar, faHeart);
-
+const LabModal = () => {
+  const [labs, setLabs] = useState([]);
+  console.log(labs);
   useEffect(() => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "http://localhost:4000/api/doctor/",
+      url: "http://localhost:4000/api/lab/",
       headers: {},
     };
 
@@ -23,7 +18,7 @@ const SpecialityModal = () => {
       .request(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
-        setSpecialists(response.data.data);
+        setLabs(response.data.data);
       })
       .catch((error) => {
         console.log(error);
@@ -33,7 +28,7 @@ const SpecialityModal = () => {
     <div>
       <div
         class="modal fade"
-        id="exampleModal"
+        id="labModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -42,7 +37,7 @@ const SpecialityModal = () => {
           <div class="modal-content">
             <div class="modal-header text-white text-center bg-success">
               <h5 class="modal-title" id="exampleModalLabel">
-                Book Appointment with PMC verified Doctors
+                Book Lab Test
               </h5>
               <button
                 type="button"
@@ -53,12 +48,12 @@ const SpecialityModal = () => {
             </div>
             <div class="modal-body">
               <Row gutter={16}>
-                {specialists.map((item, key) => (
+                {labs.map((item, key) => (
                   <Col span={8}>
                     <Card bordered={true} key={key}>
-                    {/* <FontAwesomeIcon icon={item.icon} />&nbsp; */}
+                      {/* <FontAwesomeIcon icon={item.icon} />&nbsp; */}
                       <i class="bi bi-android2"></i>&nbsp;
-                      <a href="/doctor">{item.speciality}</a>
+                      <a href="/lab">{item.name}</a>
                     </Card>
                   </Col>
                 ))}
@@ -71,4 +66,4 @@ const SpecialityModal = () => {
   );
 };
 
-export default SpecialityModal;
+export default LabModal;
