@@ -2,6 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const CallToAction = () => {
+  const toTop = () =>{
+    document.documentElement.scrollTop = 0;
+  }
   return (
     <div>
       <section id="cta" class="cta">
@@ -12,12 +15,9 @@ const CallToAction = () => {
               Book Appointment with <em>PMC verified</em> Doctors 
               </h3>
               <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+              MediTech is the digital healthcare platform in Pakistan. MediTech helps you find and instantly book appointments or online video consultations with the best doctors in Pakistan.
               </p>
-              <NavLink className="cta-btn align-self-start" to="/">
+              <NavLink to="/" onClick={()=>{toTop()}} className="cta-btn align-self-start">
                 Book Appointment
               </NavLink>
             </div>

@@ -1,6 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Step = () => {
+  const toTop = () =>{
+  document.documentElement.scrollTop = 0;
+  }
   return (
     <div>
         <section id="onfocus" class="onfocus">
@@ -8,7 +12,7 @@ const Step = () => {
 
         <div class="row g-0">
           <div class="col-lg-6 video-play position-relative">
-            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+            <Link to="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></Link>
           </div>
           <div class="col-lg-6">
             <div class="content d-flex flex-column justify-content-center h-100">
@@ -21,11 +25,10 @@ const Step = () => {
                 <li><i class="bi bi-2-circle"></i> <b>Select</b> based on Experience, Fee or Rating.</li>
                 <li><i class="bi bi-3-circle"></i> <b>Book</b> a Confirmed Appointment within Seconds.</li>
               </ul>
-              <a href="/" class="read-more align-self-start"><span>Find a Doctor</span><i class="bi bi-arrow-right"></i></a>
+              <Link to="/" onClick={()=>{toTop()}} class="read-more align-self-start"><span>Find a Doctor</span><i class="bi bi-arrow-right"></i></Link>
             </div>
           </div>
         </div>
-
       </div>
     </section>
     </div>

@@ -5,7 +5,10 @@ export const authContext = createContext({
     login: () =>{},
     logout: () =>{},
     userData: {},
+    patientData: {},
     setUser: ()=>{},
     clearUser: ()=>{},
+    setPatient: ()=>{},
+    clearPatient: ()=>{},
 
 })

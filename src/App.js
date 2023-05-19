@@ -1,5 +1,5 @@
 import "./App.css";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { init } from "./js/main";
 import { Routes, Route, Navigate, Link } from "react-router-dom";
 import { authContext } from "./context/authContext";
@@ -14,11 +14,12 @@ import BlogItems from "./pages/Health Blog/BlogItems";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Medicine from "./pages/Medicine";
-import MedicalStore from './pages/MedicalStore';
+import MedicalStore from "./pages/MedicalStore";
+import Lab from "./pages/Lab";
 import Speciality from "./pages/Speciality";
 import Doctor from "./pages/Doctor";
 import ULogin from "./user/auth/Login";
-import { userinit } from './user/js/user-main';
+import { userinit } from "./user/js/user-main";
 import Dashboard from "./user/pages/Dashboard";
 import Sidebar from "./user/layout/Sidebar";
 import UserHeader from "./user/layout/Header";
@@ -43,6 +44,7 @@ function App() {
 
   const [apiEndpoint, setApiEndpoint] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   function login() {
     setIsLoggedIn(true);
   }
@@ -58,10 +60,28 @@ function App() {
   const clearUser = () => {
     setUserData(null);
   };
+  const [patientData, setPatientData] = useState(null);
+  const setPatient = (data) => {
+    console.log("API RESPONSE: " + data);
+    setPatientData(data);
+  };
+  const clearPatient = () => {
+    setUserData(null);
+  };
 
   return (
     <authContext.Provider
-      value={{ isLoggedIn, login, logout, setUser, clearUser, userData }}
+      value={{
+        isLoggedIn,
+        login,
+        logout,
+        setUser,
+        clearUser,
+        userData,
+        patientData,
+        setPatient,
+        clearPatient,
+      }}
     >
       <>
         <Link
@@ -108,6 +128,7 @@ function App() {
               <Route path="/doctor" element={<Doctor />} />
               <Route path="/medicine" element={<Medicine />} />
               <Route path="/medicalstore" element={<MedicalStore />} />
+              <Route path="/lab" element={<Lab />} />
               <Route path="/speciality" element={<Speciality />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />

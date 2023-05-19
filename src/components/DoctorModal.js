@@ -9,6 +9,7 @@ import { Form, Input } from "antd";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+
 const DoctorModal = ({ apiEndpoint }) => {
   console.log(apiEndpoint);
 
@@ -219,7 +220,7 @@ const DoctorModal = ({ apiEndpoint }) => {
 
                 {apiEndpoint === labApi && (
                   <Form.Item
-                    name="cetificate"
+                    name="certificate"
                     //   label="City"
                     rules={[
                       {
@@ -236,7 +237,7 @@ const DoctorModal = ({ apiEndpoint }) => {
                 )}
                 {apiEndpoint === medicalstoreApi && (
                   <Form.Item
-                    name="cetificate"
+                    name="certificate"
                     //   label="City"
                     rules={[
                       {

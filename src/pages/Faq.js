@@ -2,6 +2,8 @@ import React from "react";
 import Breadcrumb from "../components/Breadcrumb";
 
 const Faq = () => {
+  document.documentElement.scrollTop = 0;
+
   return (
     <div>
       <Breadcrumb/>

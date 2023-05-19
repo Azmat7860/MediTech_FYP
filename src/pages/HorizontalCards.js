@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import SpecialityModal from "../components/SpecialityModal";
+import LabModal from "../components/LabModal";
+import { Link } from "react-router-dom";
 
 const HorizontalCards = () => {
   const [appointment, setAppoinment] = useState(false)
+  const [lab, setLab] = useState(false)
   return (
     <div>
-      <SpecialityModal appointment={appointment}/>
+      <SpecialityModal appointment={appointment} setAppoinment={setAppoinment}/>
+      <LabModal lab={lab} setLab={setLab} />
       <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
           <div class="row">
@@ -22,9 +26,9 @@ const HorizontalCards = () => {
                   <h4>Find and Book Appointment</h4>
                   <span>1000+ PMC Verified Doctors</span>
                   <p>
-                    <a className="btn-appointment" href="/" onClick={()=>{setAppoinment(true)}} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <Link className="btn-appointment" to="/" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       Book Appointment
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -47,13 +51,13 @@ const HorizontalCards = () => {
                   <h4>Book Video Consultation</h4>
                   <span>Instant Video Consultation with Top Doctors</span>
                   <p>
-                    <a
+                    <Link
                       className="btn-video-consultation"
-                      href="/"
+                      to="/"
                       data-bs-toggle="modal" data-bs-target="#exampleModal"
                     >
                       Video Consultation
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -72,9 +76,9 @@ const HorizontalCards = () => {
                   <h4>Book Lab Test</h4>
                   <span>Book Lab Test from the Top Laboraties of Pakistan</span>
                   <p>
-                    <a className="btn-lab-test" href="/" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <Link className="btn-lab-test" to="/" data-bs-toggle="modal" data-bs-target="#labModal">
                       Get Started
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>
@@ -93,12 +97,12 @@ const HorizontalCards = () => {
                   <h4>Search Medicine</h4>
                   <span>Search and found the Medicine</span>
                   <p>
-                    <a
+                    <Link
                       className="btn-video-consultation"
-                      href="/medicine"
+                      to="/medicine"
                     >
                       Get Started
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>

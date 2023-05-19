@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { authContext } from './../../context/authContext';
 
 const Sidebar = () => {
+  const auth = useContext(authContext);
   return (
     <div>
       {/* 
@@ -9,7 +11,7 @@ const Sidebar = () => {
       <aside id="sidebar" className="sidebar">
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/user-dashboard">
               <i className="bi bi-grid"></i>
               <span>Dashboard</span>
             </Link>
@@ -149,7 +151,7 @@ const Sidebar = () => {
           <li className="nav-heading">Pages</li>
 
           <li className="nav-item">
-            <NavLink className="nav-link collapsed" to="/appointment">
+            <NavLink className="nav-link collapsed" to="/user-appointment">
               <i className="bi bi-person"></i>
               <span>Appointments</span>
             </NavLink>
@@ -157,7 +159,7 @@ const Sidebar = () => {
           {/* <!-- End Profile Page Nav --> */}
 
           <li className="nav-item">
-            <NavLink className="nav-link collapsed" to="/patient">
+            <NavLink className="nav-link collapsed" to="/user-patient">
               <i className="bi bi-question-circle"></i>
               <span>Patients</span>
             </NavLink>
@@ -166,7 +168,7 @@ const Sidebar = () => {
       // <!-- End F.A.Q Page Nav --> */}
 
           <li className="nav-item">
-            <NavLink className="nav-link collapsed" to="/doctor">
+            <NavLink className="nav-link collapsed" to="/user-doctor">
               <i className="bi bi-envelope"></i>
               <span>Doctors</span>
             </NavLink>
@@ -174,7 +176,7 @@ const Sidebar = () => {
           {/* <!-- End Contact Page Nav --> */}
 
           <li className="nav-item">
-            <NavLink className="nav-link collapsed" to="/caretaker">
+            <NavLink className="nav-link collapsed" to="/user-caretaker">
               <i className="bi bi-card-list"></i>
               <span>Caretakers</span>
             </NavLink>
@@ -182,7 +184,7 @@ const Sidebar = () => {
           {/* <!-- End Register Page Nav --> */}
 
           <li className="nav-item">
-            <NavLink className="nav-link collapsed" to="/medicalstore">
+            <NavLink className="nav-link collapsed" to="/user-medicalstore">
               <i className="bi bi-box-arrow-in-right"></i>
               <span>Medical Stores</span>
             </NavLink>
@@ -190,7 +192,7 @@ const Sidebar = () => {
           {/* <!-- End Login Page Nav --> */}
 
           <li className="nav-item">
-            <NavLink className="nav-link collapsed" to="/lab">
+            <NavLink className="nav-link collapsed" to="/user-lab">
               <i className="bi bi-dash-circle"></i>
               <span>Labs</span>
             </NavLink>
@@ -198,21 +200,21 @@ const Sidebar = () => {
           {/* <!-- End Error 404 Page Nav --> */}
 
           <li className="nav-item">
-            <NavLink className="nav-link collapsed" to="/blog">
+            <NavLink className="nav-link collapsed" to="/user-blog">
               <i className="bi bi-file-earmark"></i>
               <span>Blog</span>
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link collapsed" to="/profile">
+            <NavLink className="nav-link collapsed" to="/user-profile">
             <i class="bi bi-person"></i>
               <span>Profile</span>
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link collapsed" to="/logout">
+            <NavLink className="nav-link collapsed" to="/user-logout">
             <i class="bi bi-box-arrow-right"></i>
-              <span>Logout</span>
+              <span onClick={auth.logout} >Logout</span>
             </NavLink>
           </li>
           {/* <!-- End Blank Page Nav --> */}

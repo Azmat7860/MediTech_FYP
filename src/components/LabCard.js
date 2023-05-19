@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const MedicalStoreCard = ({id,name,address,certification}) => {
+const LabCard = ({id,name,address,certification}) => {
   return (
     <div>
       <div class="card h-100 my-3">
@@ -23,4 +23,4 @@ const MedicalStoreCard = ({id,name,address,certification}) => {
   );
 };
 
-export default MedicalStoreCard;
+export default LabCard;

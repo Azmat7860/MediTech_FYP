@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { LockOutlined, MailOutlined, CloseOutlined } from "@ant-design/icons";
 import { Checkbox, Form, Input, Alert } from "antd";
 import Breadcrumb from "../../components/Breadcrumb";
-import { authContext } from "../../context/authContext";
+import { authContext } from '../../context/authContext';
 import axios from "axios";
 const { Title } = Typography;
 
@@ -15,6 +15,7 @@ function Login() {
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
   const auth = useContext(authContext);
+  console.log(auth);
 
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
@@ -24,7 +25,7 @@ function Login() {
 
     let config = {
       method: "post",
-      // maxBodyLength: Infinity,
+      maxBodyLength: Infinity,
       url: "http://localhost:4000/auth/login",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +36,7 @@ function Login() {
     axios(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
-        auth.setUser(response.data);
+        auth.setPatient(response.data);
         auth.login();
       })
       .catch((error) => {

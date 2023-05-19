@@ -169,41 +169,41 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                 <ul>
                   <li>
                     <h5 className="text-success">Book Lab Tests</h5>
-                    <Link to="https://www.marham.pk/hospitals/lahore">
+                    <Link to="/lab">
                       Chughtai Lab
                     </Link>
 
-                    <Link to="https://www.marham.pk/hospitals/karachi">
+                    <Link to="/lab">
                       CLINLAB
                     </Link>
 
-                    <Link to="https://www.marham.pk/hospitals/islamabad">
+                    <Link to="/lab">
                       One Health Labs
                     </Link>
 
-                    <Link to="https://www.marham.pk/hospitals/rawalpindi">
+                    <Link to="/lab">
                       Dr. Essa’s Lab
                     </Link>
 
-                    <Link to="https://www.marham.pk/hospitals/faisalabad">
+                    <Link to="/lab">
                       Citilab
                     </Link>
                   </li>
                   <li>
                     <h5 className="text-success">Labs in Pakistan</h5>
-                    <Link to="https://www.marham.pk/hospitals/gujranwala">
+                    <Link to="/lab">
                       Labs in Lahore
                     </Link>
-                    <Link to="https://www.marham.pk/hospitals/bahawalpur">
+                    <Link to="/lab">
                       Labs in Islamabad
                     </Link>
-                    <Link to="https://www.marham.pk/hospitals/gujranwala">
+                    <Link to="/lab">
                       Labs in Karachi
                     </Link>
-                    <Link to="https://www.marham.pk/hospitals/bahawalpur">
+                    <Link to="/lab">
                       Labs in Peshawar
                     </Link>
-                    <Link to="https://www.marham.pk/hospitals/bahawalpur">
+                    <Link to="/lab">
                       Labs in Quetta
                     </Link>
                   </li>
