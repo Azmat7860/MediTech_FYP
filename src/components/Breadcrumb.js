@@ -12,7 +12,7 @@ const Breadcrumb = ({ title, subtitle, subtitle2 }) => {
           <div class="container position-relative">
             <div class="row d-flex justify-content-center">
               <div class="col-lg-6 text-center mt-3">
-                <h2>{title}</h2>
+                {subtitle ? <h2>{subtitle}</h2> : <h2>{title}</h2>}
                 <p>
                   Odio et unde deleniti. Deserunt numquam exercitationem.
                   Officiis quo odio sint voluptas consequatur ut a odio

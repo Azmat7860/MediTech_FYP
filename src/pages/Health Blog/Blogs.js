@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const Blogs = () => {
   return (
     <div>
-      <main id="main">
         <Breadcrumb title={"Blog"}/>
 
         {/* <!-- ======= Blog Section ======= --> */}
@@ -233,7 +232,6 @@ const Blogs = () => {
           </div>
         </section>
         {/* <!-- End Blog Section --> */}
-      </main>
     </div>
   );
 };

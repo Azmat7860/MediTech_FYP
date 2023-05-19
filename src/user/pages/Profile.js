@@ -24,7 +24,7 @@ const Profile = () => {
               <div class="card">
                 <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
                   <img
-                    src="assets/img/profile-img.jpg"
+                    src="user-assets/img/profile-img.jpg"
                     alt="Profile"
                     class="rounded-circle"
                   />
@@ -168,7 +168,7 @@ const Profile = () => {
                           </label>
                           <div class="col-md-8 col-lg-9">
                             <img
-                              src="assets/img/profile-img.jpg"
+                              src="user-assets/img/profile-img.jpg"
                               alt="Profile"
                             />
                             <div class="pt-2">

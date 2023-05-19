@@ -19,7 +19,7 @@ import Lab from "./pages/Lab";
 import Speciality from "./pages/Speciality";
 import Doctor from "./pages/Doctor";
 import ULogin from "./user/auth/Login";
-import { userinit } from "./user/js/user-main";
+import { userinit } from './js/user-main';
 import Dashboard from "./user/pages/Dashboard";
 import Sidebar from "./user/layout/Sidebar";
 import UserHeader from "./user/layout/Header";
@@ -38,7 +38,6 @@ function App() {
   useEffect(() => {
     // Call a function from the imported script
     init();
-
     userinit();
   }, []);
 
