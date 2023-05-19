@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-:root {
+/* :root {
   scroll-behavior: smooth;
 }
 
@@ -28,13 +28,13 @@ h4,
 h5,
 h6 {
   font-family: "Nunito", sans-serif;
-}
+} */
 
 
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+/* #preloader {
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -74,7 +74,7 @@ h6 {
     left: calc(50% - 36px);
     opacity: 0;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Main
@@ -108,7 +108,7 @@ h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+/* .back-to-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
@@ -136,7 +136,7 @@ h6 {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
-}
+} */
 
 /*--------------------------------------------------------------
 # Override some default Bootstrap stylings
@@ -392,29 +392,29 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.logo {
+.logos {
   line-height: 1;
 }
 
 @media (min-width: 1200px) {
-  .logo {
+  .logos {
     width: 280px;
   }
 }
 
-.logo img {
+.logos img {
   max-height: 26px;
   margin-right: 6px;
 }
 
-.logo span {
+.logos span {
   font-size: 26px;
   font-weight: 700;
   color: #012970;
   font-family: "Nunito", sans-serif;
 }
 
-.header {
+.headers {
   transition: all 0.5s;
   z-index: 997;
   height: 60px;
@@ -425,20 +425,20 @@ h6 {
   /* Search Bar */
 }
 
-.header .toggle-sidebar-btn {
+.headers .toggle-sidebar-btn {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
   color: #012970;
 }
 
-.header .search-bar {
+.headers .search-bar {
   min-width: 360px;
   padding: 0 20px;
 }
 
 @media (max-width: 1199px) {
-  .header .search-bar {
+  .headers .search-bar {
     position: fixed;
     top: 50px;
     left: 0;
@@ -452,18 +452,18 @@ h6 {
     opacity: 0;
   }
 
-  .header .search-bar-show {
+  .headers .search-bar-show {
     top: 60px;
     visibility: visible;
     opacity: 1;
   }
 }
 
-.header .search-form {
+.headers .search-form {
   width: 100%;
 }
 
-.header .search-form input {
+.headers .search-form input {
   border: 0;
   font-size: 14px;
   color: #012970;
@@ -474,21 +474,21 @@ h6 {
   width: 100%;
 }
 
-.header .search-form input:focus,
-.header .search-form input:hover {
+.headers .search-form input:focus,
+.headers .search-form input:hover {
   outline: none;
   box-shadow: 0 0 10px 0 rgba(1, 41, 112, 0.15);
   border: 1px solid rgba(1, 41, 112, 0.3);
 }
 
-.header .search-form button {
+.headers .search-form button {
   border: 0;
   padding: 0;
   margin-left: -30px;
   background: none;
 }
 
-.header .search-form button i {
+.headers .search-form button i {
   color: #012970;
 }
 
@@ -635,7 +635,7 @@ h6 {
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
-.sidebar {
+.sidebars {
   position: fixed;
   top: 60px;
   left: 0;
@@ -652,31 +652,31 @@ h6 {
 }
 
 @media (max-width: 1199px) {
-  .sidebar {
+  .sidebars {
     left: -300px;
   }
 }
 
-.sidebar::-webkit-scrollbar {
+.sidebars::-webkit-scrollbar {
   width: 5px;
   height: 8px;
   background-color: #fff;
 }
 
-.sidebar::-webkit-scrollbar-thumb {
+.sidebars::-webkit-scrollbar-thumb {
   background-color: #aab7cf;
 }
 
 @media (min-width: 1200px) {
 
   #main,
-  #footer {
+  #footers {
     margin-left: 300px;
   }
 }
 
 @media (max-width: 1199px) {
-  .toggle-sidebar .sidebar {
+  .toggle-sidebar .sidebars {
     left: 0;
   }
 }
@@ -684,11 +684,11 @@ h6 {
 @media (min-width: 1200px) {
 
   .toggle-sidebar #main,
-  .toggle-sidebar #footer {
+  .toggle-sidebar #footers {
     margin-left: 0;
   }
 
-  .toggle-sidebar .sidebar {
+  .toggle-sidebar .sidebars {
     left: -300px;
   }
 }
@@ -1089,44 +1089,44 @@ h6 {
 /*--------------------------------------------------------------
 # F.A.Q Page
 --------------------------------------------------------------*/
-.faq .basic h6 {
+.faqs .basic h6 {
   font-size: 18px;
   font-weight: 600;
   color: #4154f1;
 }
 
-.faq .basic p {
+.faqs .basic p {
   color: #6980aa;
 }
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info-box {
+.contacts .info-box {
   padding: 28px 30px;
 }
 
-.contact .info-box i {
+.contacts .info-box i {
   font-size: 38px;
   line-height: 0;
   color: #4154f1;
 }
 
-.contact .info-box h3 {
+.contacts .info-box h3 {
   font-size: 20px;
   color: #012970;
   font-weight: 700;
   margin: 20px 0 10px 0;
 }
 
-.contact .info-box p {
+.contacts .info-box p {
   padding: 0;
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.contact .php-email-form .error-message {
+.contacts .php-email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1136,7 +1136,7 @@ h6 {
   font-weight: 600;
 }
 
-.contact .php-email-form .sent-message {
+.contacts .php-email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1146,7 +1146,7 @@ h6 {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contacts .php-email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
@@ -1154,7 +1154,7 @@ h6 {
   margin-bottom: 24px;
 }
 
-.contact .php-email-form .loading:before {
+.contacts .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1166,28 +1166,28 @@ h6 {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contacts .php-email-form input,
+.contacts .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 0;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.contacts .php-email-form input:focus,
+.contacts .php-email-form textarea:focus {
   border-color: #4154f1;
 }
 
-.contact .php-email-form input {
+.contacts .php-email-form input {
   padding: 10px 15px;
 }
 
-.contact .php-email-form textarea {
+.contacts .php-email-form textarea {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contacts .php-email-form button[type=submit] {
   background: #4154f1;
   border: 0;
   padding: 10px 30px;
@@ -1196,7 +1196,7 @@ h6 {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contacts .php-email-form button[type=submit]:hover {
   background: #5969f3;
 }
 
@@ -1251,19 +1251,19 @@ h6 {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.footer {
+.footers {
   padding: 20px 0;
   font-size: 14px;
   transition: all 0.3s;
   border-top: 1px solid #cddfff;
 }
 
-.footer .copyright {
+.footers .copyrights {
   text-align: center;
   color: #012970;
 }
 
-.footer .credits {
+.footers .credits {
   padding-top: 5px;
   text-align: center;
   font-size: 13px;

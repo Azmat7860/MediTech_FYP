@@ -4,7 +4,6 @@ import Breadcrumb from "../../components/Breadcrumb";
 const BlogItems = () => {
   return (
     <div>
-      <main id="main">
        <Breadcrumb title={"Blog"} subtitle={"BlogItems"}/>
 
         {/* <!-- ======= Blog Details Section ======= --> */}
@@ -542,7 +541,6 @@ const BlogItems = () => {
             </div>
           </div>
         </section>
-      </main>
     </div>
   );
 };

@@ -64,6 +64,7 @@ export function userinit() {
       select('.search-bar').classList.toggle('search-bar-show')
     })
   }
+  
 
   /**
    * Navbar links active state on scroll
@@ -88,7 +89,7 @@ export function userinit() {
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
    */
-  let selectHeader = select('#header')
+  let selectHeader = select('#headers')
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {

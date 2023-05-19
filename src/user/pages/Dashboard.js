@@ -406,7 +406,7 @@ const Dashboard = () => {
                           <tr>
                             <th scope="row">
                               <a href="/">
-                                <img src="assets/img/product-1.jpg" alt="" />
+                                <img src="user-assets/img/product-1.jpg" alt="" />
                               </a>
                             </th>
                             <td>
@@ -421,7 +421,7 @@ const Dashboard = () => {
                           <tr>
                             <th scope="row">
                               <a href="/">
-                                <img src="assets/img/product-2.jpg" alt="" />
+                                <img src="user-assets/img/product-2.jpg" alt="" />
                               </a>
                             </th>
                             <td>
@@ -436,7 +436,7 @@ const Dashboard = () => {
                           <tr>
                             <th scope="row">
                               <a href="/">
-                                <img src="assets/img/product-3.jpg" alt="" />
+                                <img src="user-assets/img/product-3.jpg" alt="" />
                               </a>
                             </th>
                             <td>
@@ -451,7 +451,7 @@ const Dashboard = () => {
                           <tr>
                             <th scope="row">
                               <a href="/">
-                                <img src="assets/img/product-4.jpg" alt="" />
+                                <img src="user-assets/img/product-4.jpg" alt="" />
                               </a>
                             </th>
                             <td>
@@ -466,7 +466,7 @@ const Dashboard = () => {
                           <tr>
                             <th scope="row">
                               <a href="/">
-                                <img src="assets/img/product-5.jpg" alt="" />
+                                <img src="user-assets/img/product-5.jpg" alt="" />
                               </a>
                             </th>
                             <td>
@@ -726,7 +726,7 @@ const Dashboard = () => {
 
                   <div class="news">
                     <div class="post-item clearfix">
-                      <img src="assets/img/news-1.jpg" alt="" />
+                      <img src="user-assets/img/news-1.jpg" alt="" />
                       <h4>
                         <a href="/">Nihil blanditiis at in nihil autem</a>
                       </h4>
@@ -737,7 +737,7 @@ const Dashboard = () => {
                     </div>
 
                     <div class="post-item clearfix">
-                      <img src="assets/img/news-2.jpg" alt="" />
+                      <img src="user-assets/img/news-2.jpg" alt="" />
                       <h4>
                         <a href="/">Quidem autem et impedit</a>
                       </h4>
@@ -748,7 +748,7 @@ const Dashboard = () => {
                     </div>
 
                     <div class="post-item clearfix">
-                      <img src="assets/img/news-3.jpg" alt="" />
+                      <img src="user-assets/img/news-3.jpg" alt="" />
                       <h4>
                         <a href="/">
                           Id quia et et ut maxime similique occaecati ut
@@ -761,7 +761,7 @@ const Dashboard = () => {
                     </div>
 
                     <div class="post-item clearfix">
-                      <img src="assets/img/news-4.jpg" alt="" />
+                      <img src="user-assets/img/news-4.jpg" alt="" />
                       <h4>
                         <a href="/">Laborum corporis quo dara net para</a>
                       </h4>
@@ -772,7 +772,7 @@ const Dashboard = () => {
                     </div>
 
                     <div class="post-item clearfix">
-                      <img src="assets/img/news-5.jpg" alt="" />
+                      <img src="user-assets/img/news-5.jpg" alt="" />
                       <h4>
                         <a href="/">Et dolores corrupti quae illo quod dolor</a>
                       </h4>
