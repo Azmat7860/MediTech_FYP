@@ -12,6 +12,10 @@ const HorizontalCards = () => {
       <LabModal lab={lab} setLab={setLab} />
       <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
+        <div className="section-title text-center">
+            <h2>Find The Doctors</h2>
+            <p>Let's Find The Right Doctor For You!</p>
+          </div>
           <div class="row">
             <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
               <div class="member d-flex align-items-start">

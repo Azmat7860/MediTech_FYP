@@ -49,10 +49,16 @@ const LabModal = () => {
             <div class="modal-body">
               <Row gutter={16}>
                 {labs.map((item, key) => (
-                  <Col span={8}>
+                  <Col span={8} className="my-2">
                     <Card bordered={true} key={key}>
                       {/* <FontAwesomeIcon icon={item.icon} />&nbsp; */}
-                      <i class="bi bi-android2"></i>&nbsp;
+                      <img
+                          src="assets/img/speciality/covid.png"
+                          className="rounded-circle"
+                          alt="..."
+                          width={50}
+                          height={50}
+                        />&nbsp;&nbsp;
                       <a href="/lab">{item.name}</a>
                     </Card>
                   </Col>

@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "antd";
 import axios from "axios";
-// import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faCoffee, faStar, faHeart } from '@fortawesome/free-solid-svg-icons';
-
+import { Link } from "react-router-dom";
 
 const SpecialityModal = () => {
   const [specialists, setSpecialists] = useState([]);
-  // library.add(faCoffee, faStar, faHeart);
 
   useEffect(() => {
     let config = {
@@ -54,12 +49,22 @@ const SpecialityModal = () => {
             <div class="modal-body">
               <Row gutter={16}>
                 {specialists.map((item, key) => (
-                  <Col span={8}>
-                    <Card bordered={true} key={key}>
-                    {/* <FontAwesomeIcon icon={item.icon} />&nbsp; */}
-                      <i class="bi bi-android2"></i>&nbsp;
-                      <a href="/doctor">{item.speciality}</a>
-                    </Card>
+                  <Col span={8} className="my-2">
+                    <Link>
+                      <Card
+                        bordered={true}
+                        key={key}
+                      >
+                        <img
+                          src={`assets/img/speciality/head-with-brain${key+1}.png`}
+                          className="rounded-circle"
+                          alt="..."
+                          width={50}
+                          height={50}
+                        />&nbsp;&nbsp;
+                        <Link to={`/doctor?speciality=${item.speciality}`}>{item.speciality}</Link>
+                      </Card>
+                    </Link>
                   </Col>
                 ))}
               </Row>

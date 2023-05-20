@@ -1,7 +1,46 @@
-import React from "react";
+import axios from "axios";
+import React, { useContext } from "react";
+import { Button, Form, Input } from "antd";
+import { useNavigate } from "react-router";
+import { authContext } from "./../context/authContext";
+import { UserOutlined } from "@ant-design/icons";
+import { LockOutlined } from "@ant-design/icons";
 
-const AppointmentModal = ({id,name}) => {
-  console.log(name);
+const AppointmentModal = ({ id, name, type }) => {
+  console.log(id);
+  const auth = useContext(authContext);
+  console.log(auth);
+  const navigate = useNavigate();
+
+  const onFinish = (values) => {
+    console.log("Received values of form2323: ", type);
+    const formData = new FormData();
+    formData.append("patient_name", values.patient_name);
+    formData.append("appointment_type", type);
+    formData.append("phone", values.phone);
+    formData.append("doctor_id", id);
+
+    let config = {
+      method: "post",
+      maxBodyLength: Infinity,
+      url: "http://localhost:4000/api/appointment/",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: formData,
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+        navigate("/booked-appointment");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div>
       <div
@@ -25,39 +64,54 @@ const AppointmentModal = ({id,name}) => {
               ></button>
             </div>
             <div class="modal-body">
-              <form class="row g-3 needs-validation">
-                <div class="col-12 my-3">
-                  <label htmlFor="yourName" class="form-label">
-                    Patient's Name
-                  </label>
-                  <input
+              <Form
+                name="normal_login"
+                className="login-form"
+                initialValues={{
+                  remember: true,
+                }}
+                onFinish={onFinish}
+              >
+                <Form.Item
+                  name="patient_name"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your Name!",
+                    },
+                  ]}
+                >
+                  <Input
+                    prefix={<UserOutlined className="site-form-item-icon" />}
+                    placeholder="Enter Your Name"
                     type="text"
-                    name="name"
-                    class="form-control"
-                    id="yourName"
-                    required
                   />
-                </div>
-
-                <div class="col-12 my-3">
-                  <label htmlFor="yourPhone" class="form-label">
-                    Phone Number
-                  </label>
-                  <input
+                </Form.Item>
+                <Form.Item
+                  name="phone"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input your Phone Number!",
+                    },
+                  ]}
+                >
+                  <Input
+                    prefix={<LockOutlined className="site-form-item-icon" />}
                     type="text"
-                    name="phone"
-                    class="form-control"
-                    id="phoneNumber"
-                    required
+                    placeholder="e.g 03150470727"
                   />
-                </div>
-                <div class="col-12 my-3">
-                  <button class="btn btn-primary w-100" type="submit">
+                </Form.Item>
+                <Form.Item>
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    className="login-form-button btn btn-primary w-100 p-2"
+                  >
                     Book Appointment
-                  </button>
-                </div>
-                
-              </form>
+                  </Button>
+                </Form.Item>
+              </Form>
             </div>
           </div>
         </div>

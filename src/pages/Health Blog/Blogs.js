@@ -3,6 +3,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import { Link } from 'react-router-dom';
 
 const Blogs = () => {
+  document.documentElement.scrollTop = 0;
   return (
     <div>
         <Breadcrumb title={"Blog"}/>
