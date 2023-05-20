@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Breadcrumb = ({ title, subtitle, subtitle2 }) => {
+const Breadcrumb = ({ title, subtitle, subtitle2 ,length}) => {
   return (
     <div>
       <div class="breadcrumbs">
@@ -12,11 +12,18 @@ const Breadcrumb = ({ title, subtitle, subtitle2 }) => {
           <div class="container position-relative">
             <div class="row d-flex justify-content-center">
               <div class="col-lg-6 text-center mt-3">
-                {subtitle ? <h2>{subtitle}</h2> : <h2>{title}</h2>}
+                {/* {subtitle ? <h2>{subtitle}</h2> : <h2>{title}</h2>} */}
+                {subtitle2 ? (
+                  <h2>{subtitle2}</h2>
+                ) : subtitle ? (
+                  <h2>{subtitle}</h2>
+                ) : (
+                  <h2>{title}</h2>
+                )}
                 <p>
-                  Odio et unde deleniti. Deserunt numquam exercitationem.
-                  Officiis quo odio sint voluptas consequatur ut a odio
-                  voluptatem.
+                 {length && (
+                  length
+                 )}
                 </p>
               </div>
             </div>

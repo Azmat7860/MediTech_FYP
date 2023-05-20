@@ -19,7 +19,7 @@ import Lab from "./pages/Lab";
 import Speciality from "./pages/Speciality";
 import Doctor from "./pages/Doctor";
 import ULogin from "./user/auth/Login";
-import { userinit } from './js/user-main';
+import { userinit } from "./js/user-main";
 import Dashboard from "./user/pages/Dashboard";
 import Sidebar from "./user/layout/Sidebar";
 import UserHeader from "./user/layout/Header";
@@ -33,6 +33,7 @@ import UserLab from "./user/pages/Lab";
 import UserBlog from "./user/pages/Blog";
 import UserProfile from "./user/pages/Profile";
 import UserLogout from "./user/auth/Logout";
+import BookAppointment from "./pages/BookAppointment";
 
 function App() {
   useEffect(() => {
@@ -124,6 +125,7 @@ function App() {
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blog-item" element={<BlogItems />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/booked-appointment" element={<BookAppointment />} />
               <Route path="/doctor" element={<Doctor />} />
               <Route path="/medicine" element={<Medicine />} />
               <Route path="/medicalstore" element={<MedicalStore />} />

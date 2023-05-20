@@ -1,24 +1,29 @@
-import { Card, Col, Row } from "antd";
+import { Card } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SpecialityCard = ({ id, name, speciality }) => {
+const SpecialityCard = ({ id, speciality }) => {
   return (
     <div>
-      <div className="container m-3">
+      <div className="container">
         <div className="row">
-          <Row>
-            <Col>
               <Link>
-                <Card bordered={true}>
-                  {/* <i class="bi bi-android2"></i>&nbsp; */}
-                  <b>{name}</b>
-                  <br />
+                <Card
+                  bordered={true}
+                  style={{
+                    width: 350,
+                  }}
+                >
+                  <img
+                    src={`assets/img/speciality/head-with-brain1.png`}
+                    className="rounded-circle"
+                    alt=""
+                    width={50}
+                    height={50}
+                  />&nbsp;&nbsp;
                   {speciality}
                 </Card>
               </Link>
-            </Col>
-          </Row>
         </div>
       </div>
     </div>

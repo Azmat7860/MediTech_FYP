@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AppointmentModal from "./AppointmentModal";
 
 const DoctorCard = ({id,name,speciality}) => {
+  const [type, setType] = useState();
  
   return (
     <div>
-      <AppointmentModal id={id} name={name}/>
+      <AppointmentModal id={id} name={name} type={type}/>
       <section id="doctor" className="doctor">
         <div class="card">
           <div class="row g-0">
@@ -48,13 +49,13 @@ const DoctorCard = ({id,name,speciality}) => {
             </div>
             <div className="col-md-3 my-4">
               <div>
-                <NavLink className="btn-appointment" to={`/${id}`} data-bs-toggle="modal" data-bs-target={`#appointmentModal${id}`}>
+                <NavLink className="btn-appointment" to={`/${id}`} onClick={()=>{setType("physical")}} data-bs-toggle="modal" data-bs-target={`#appointmentModal${id}`}>
                   Book Appointment
                 </NavLink>
               </div>
               <br />
               <div>
-                <NavLink className="btn-getstarted" to="/appointment-modal" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                <NavLink className="btn-getstarted" to={`/${id}`} data-bs-toggle="modal" data-bs-target={`#appointmentModal${id}`}>
                   Video Consultation
                 </NavLink>
               </div>

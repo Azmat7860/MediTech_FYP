@@ -13,7 +13,7 @@ import TopMedicine from "./TopMedicine";
 
 
 const Home = () => {
-  // document.documentElement.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 
   return (
     <div>
@@ -42,14 +42,14 @@ const Home = () => {
             </div>
 
             <div className="filter_form bg-white shadow-lg">
-              <form method="GET">
+              <form method="Post">
                 <div className="row mx-n2 d-flex align-items-center">
                   <div className="col-12 col-md col-lg-5 d-flex flex-column my-1 px-3">
                     <div className="form-group-overlay first">
                       <label htmlFor="locations">Location</label>
                       <input
                         id="location"
-                        name=""
+                        name="address"
                         className="form-control m-0 border-0 bg-transparent shadow-none h-auto"
                         type="text"
                         size="50"
@@ -63,7 +63,7 @@ const Home = () => {
                       <label htmlFor="doctors">Doctor</label>
                       <input
                         id="doctor"
-                        name=""
+                        name="speciality"
                         className="form-control m-0 border-0 bg-transparent shadow-none h-auto"
                         type="text"
                         placeholder="Find Doctors or Specialists"

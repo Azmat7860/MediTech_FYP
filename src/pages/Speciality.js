@@ -34,7 +34,7 @@ const Speciality = () => {
         <div className="container">
           <div className="row">
             {specialists.map((item, key) => (
-              <div key={key} className="col-sm-6 col-md-4 col-lg-3">
+              <div key={key} className="col-sm-6 col-md-4 col-lg-4 my-2">
                 <SpecialityCard key={item._id} id={item._id} name={item.name} speciality={item.speciality} />
               </div>
             ))}

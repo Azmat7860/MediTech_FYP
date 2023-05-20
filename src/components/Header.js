@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import DoctorModal from "./DoctorModal";
 
+
+
 const Header = ({ apiEndpoint,setApiEndpoint }) => {
   const [doctor, setDoctor] = useState(false);
 
   console.log(setApiEndpoint)
 
+ 
   
     function handleButtonDoctor() {
       setApiEndpoint("http://localhost:4000/doctorAuth/register");
@@ -49,17 +52,17 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                   <li>
                     <h5 className="text-success">Find doctor by speciality</h5>
 
-                    <Link to="/doctor">Neuro Surgeon</Link>
+                    <Link to='/doctor?speciality=Neuro surgeon'>Neuro Surgeon</Link>
 
-                    <Link to="/doctor">Dermatologist</Link>
+                    <Link to="/doctor?speciality=Dermatologist">Dermatologist</Link>
 
-                    <Link to="/doctor">Neurologist</Link>
+                    <Link to="/doctor?speciality=Neurologist">Neurologist</Link>
 
-                    <Link to="/doctor">Urologist</Link>
+                    <Link to="/doctor?speciality=Urologist">Urologist</Link>
 
-                    <Link to="/doctor">Eye Surgeon</Link>
+                    <Link to="/doctor?speciality=EyeSurgeon">Eye Surgeon</Link>
 
-                    <Link to="/doctor">View All Specialities</Link>
+                    <Link to="/speciality">View All Specialities</Link>
                   </li>
                   <li>
                     <h5 className="text-success">Find Doctor by Disease</h5>
@@ -78,28 +81,28 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                     <Link to="/doctor">
                       Growth Disorders
                     </Link>
-                    <Link to="/doctor">
+                    <Link to="/speciality">
                       View All
                     </Link>
                   </li>
                   <li>
                     <h5 className="text-success">Find Doctor via City</h5>
-                    <Link to="/doctor">
+                    <Link to="/doctor?address=Lahore">
                       Best Doctors in Lahore
                     </Link>
-                    <Link to="/doctor">
+                    <Link to="/doctor?address=Quetta">
                       Best Doctors in Quetta
                     </Link>
-                    <Link to="/doctor">
+                    <Link to="/doctor?address=Peshawar">
                       Best Doctors in Peshawar
                     </Link>
-                    <Link to="/doctor">
+                    <Link to="/doctor?address=Karachi">
                       Best Doctors in Karachi
                     </Link>
-                    <Link to="/doctor">
+                    <Link to="/doctor?address=Rahim Yar Khan">
                       Best Doctors in Rahim Yar Khan
                     </Link>
-                    <Link to="/doctor">
+                    <Link to="/speciality">
                       View All
                     </Link>
                   </li>
