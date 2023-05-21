@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "antd";
 import axios from "axios";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const LabModal = () => {
@@ -53,13 +54,24 @@ const LabModal = () => {
                     <Card bordered={true} key={key}>
                       {/* <FontAwesomeIcon icon={item.icon} />&nbsp; */}
                       <img
-                          src="assets/img/speciality/covid.png"
-                          className="rounded-circle"
-                          alt="..."
-                          width={50}
-                          height={50}
-                        />&nbsp;&nbsp;
-                      <a href="/lab">{item.name}</a>
+                        src="assets/img/speciality/covid.png"
+                        className="rounded-circle"
+                        alt="..."
+                        width={50}
+                        height={50}
+                      />
+                      &nbsp;&nbsp;
+                      <Link
+                        to={`/lab?name=${encodeURIComponent(
+                          item.name
+                        )}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.location.href = e.target.href;
+                        }}
+                      >
+                        {item.name}
+                      </Link>
                     </Card>
                   </Col>
                 ))}

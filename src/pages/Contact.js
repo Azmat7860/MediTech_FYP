@@ -5,15 +5,11 @@ const Contact = () => {
   document.documentElement.scrollTop = 0;
   return (
     <div>
-      <Breadcrumb/>
+      <Breadcrumb title={"Contact"}/>
       <section id="contact" className="contact">
         <div className="container" data-aos="fade-up">
-          <div className="section-header">
+          <div className="section-header section-title">
             <h2>Contact</h2>
-            {/* <p>
-              Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam
-              porro nihil id ratione ea sunt quis dolorem dolore earum
-            </p> */}
           </div>
 
           <div className="row gx-lg-0 gy-4">
@@ -23,7 +19,7 @@ const Contact = () => {
                   <i className="bi bi-geo-alt flex-shrink-0"></i>
                   <div>
                     <h4>Location:</h4>
-                    <p>A108 Adam Street, New York, NY 535022</p>
+                    <p>Street No. 4 House No. 93, Abbasia Town, Rahim Yar Khan</p>
                   </div>
                 </div>
                 {/* <!-- End Info Item --> */}
@@ -32,7 +28,7 @@ const Contact = () => {
                   <i className="bi bi-envelope flex-shrink-0"></i>
                   <div>
                     <h4>Email:</h4>
-                    <p>info@example.com</p>
+                    <p>imazmat102@gmail.com</p>
                   </div>
                 </div>
                 {/* <!-- End Info Item --> */}
@@ -41,7 +37,7 @@ const Contact = () => {
                   <i className="bi bi-phone flex-shrink-0"></i>
                   <div>
                     <h4>Call:</h4>
-                    <p>+1 5589 55488 55</p>
+                    <p>0315-0470727</p>
                   </div>
                 </div>
                 {/* <!-- End Info Item --> */}
@@ -50,7 +46,7 @@ const Contact = () => {
                   <i className="bi bi-clock flex-shrink-0"></i>
                   <div>
                     <h4>Open Hours:</h4>
-                    <p>Mon-Sat: 11AM - 23PM</p>
+                    <p>Mon-Sun: 10AM - 7PM</p>
                   </div>
                 </div>
                 {/* <!-- End Info Item --> */}
@@ -105,14 +101,7 @@ const Contact = () => {
                     required
                   ></textarea>
                 </div>
-                <div className="my-3">
-                  <div className="loading">Loading</div>
-                  <div className="error-message"></div>
-                  <div className="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div>
-                <div className="text-center">
+                <div className="text-center mt-4">
                   <button type="submit">Send Message</button>
                 </div>
               </form>

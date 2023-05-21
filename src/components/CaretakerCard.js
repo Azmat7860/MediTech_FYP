@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import AppointmentModal from "./AppointmentModal";
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import CaretakerModal from './CaretakerModal';
 
-const DoctorCard = ({id,name,speciality}) => {
-  const [type, setType] = useState();
- 
+const CaretakerCard = ({id,name,speciality}) => {
+    const [type, setType] = useState();
   return (
     <div>
-      <AppointmentModal id={id} name={name} type={type}/>
-      <section id="doctor" className="doctor">
+        <CaretakerModal id={id} name={name} type={type}/>
+         <section id="doctor" className="doctor">
         <div class="card">
           <div class="row g-0">
             <div class="col-md-2">
@@ -34,29 +33,23 @@ const DoctorCard = ({id,name,speciality}) => {
                   style={{backgroundColor: "#efefef" , maxWidth:"300px"}}>
                   <div>
                     <p class="small text-muted mb-1">Reviews</p>
-                    <p class="mb-0">41</p>
+                    <p class="mb-0">12</p>
                   </div>
                   <div class="px-4">
                     <p class="small text-muted mb-1">Experience</p>
-                    <p class="mb-0">3 years</p>
+                    <p class="mb-0">1 year</p>
                   </div>
                   <div>
                     <p class="small text-muted mb-1">Satisfaction</p>
-                    <p class="mb-0">88.5%</p>
+                    <p class="mb-0">84.5%</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-3 my-4">
+            <div className="col-md-3 vertical-center">
               <div>
                 <NavLink className="btn-appointment" to={`/${id}`} onClick={()=>{setType("physical")}} data-bs-toggle="modal" data-bs-target={`#appointmentModal${id}`}>
                   Book Appointment
-                </NavLink>
-              </div>
-              <br />
-              <div>
-                <NavLink className="btn-getstarted" to={`/${id}`} onClick={()=>{setType("video")}} data-bs-toggle="modal" data-bs-target={`#appointmentModal${id}`}>
-                  Video Consultation
                 </NavLink>
               </div>
             </div>
@@ -64,7 +57,7 @@ const DoctorCard = ({id,name,speciality}) => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default DoctorCard;
+export default CaretakerCard

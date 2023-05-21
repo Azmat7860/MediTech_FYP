@@ -14,6 +14,8 @@ const Doctor = () => {
   console.log(address)
 
   useEffect(() => {
+    if (specialityName) {
+      
     let config = {
       method: "get",
       maxBodyLength: Infinity,
@@ -24,35 +26,37 @@ const Doctor = () => {
     axios
       .request(config)
       .then((response) => {
-        console.log(JSON.stringify(response.data));
-        setSpecialists(response.data.data);
+        console.log(JSON.stringify(response.data.data));
+          setSpecialists(response.data.data);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, [specialityName]);
+    }else{
 
-  useEffect(() => {
-    let config = {
-      method: "get",
-      maxBodyLength: Infinity,
-      url: `http://localhost:4000/api/doctor?address=${address}`,
-      headers: {},
-    };
+      let config2 = {
+        method: "get",
+        maxBodyLength: Infinity,
+        url: `http://localhost:4000/api/doctor?address=${address}`,
+        headers: {},
+      };
+  
+      axios
+        .request(config2)
+        .then((response) => {
+          console.log(JSON.stringify(response.data.data));
+            setSpecialists(response.data.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      }
 
-    axios
-      .request(config)
-      .then((response) => {
-        console.log(JSON.stringify(response.data));
-        setSpecialists(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [address]);
+  }, [specialityName,address]);
+
   return (
     <div>
-      <Breadcrumb title={"Doctors"} length={specialists.length ? specialists.length + " " + (specialityName ? specialityName + " Doctors "  : specialists.length > 1 ? " Doctors In " + address : " Doctor In " + address ) : " " }/>
+      <Breadcrumb title={"Doctors"} length={specialists.length ? specialists.length + " " + (specialityName ? (specialists.length > 1 ? specialityName + " Doctors " : specialityName + " Doctor ")  : specialists.length > 1 ? " Doctors In " + address : " Doctor In " + address ) : " " }/>
       <div id="doctor" className="section-bg mt-3">
         <div className="container">
           <div className="row">

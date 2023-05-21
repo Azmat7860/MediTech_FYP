@@ -1,20 +1,20 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { init } from "../js/main";
 
 const Feedback = () => {
   useEffect(() => {
     //   // Call a function from the imported script
-      init();
-    }, []);
+    init();
+  }, []);
   return (
     <div>
       <section id="testimonials" class="testimonials">
         <div class="container" data-aos="fade-up">
-        <div className="section-title text-center">
+          <div className="section-title text-center">
             <h2>What Our Users Say About Us!</h2>
             <p>
               Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. 
+              ex aliquid fuga eum quidem. Sit sint consectetur velit.
             </p>
           </div>
 
@@ -43,10 +43,11 @@ const Feedback = () => {
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Proin iaculis purus consequat sem cure digni ssim donec
-                      porttitora entum suscipit rhoncus. Accusantium quam,
-                      ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                      risus at semper.
+                      Amazing lifesaver app. I am from the UK and all I needed
+                      was to speak to a hematologist. There isnt a simple way to
+                      do this in the UK that is good value for money. I used
+                      this app and got exactly what i needed and was able to
+                      speak to a speacilist same day.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -77,10 +78,10 @@ const Feedback = () => {
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Export tempor illum tamen malis malis eram quae irure esse
-                      labore quem cillum quid cillum eram malis quorum velit
-                      fore eram velit sunt aliqua noster fugiat irure amet legam
-                      anim culpa.
+                      What a wonderful, helpful and Awesome i personally
+                      recommend to all of you please use this app. Because when
+                      i visit to Doctor through this app i just ask wowww two
+                      thumps up for the Doctor and this application ❤️❤️❤️❤️❤️.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -111,9 +112,11 @@ const Feedback = () => {
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Enim nisi quem export duis labore cillum quae magna enim
-                      sint quorum nulla quem veniam duis minim tempor labore
-                      quem eram duis noster aute amet eram fore quis sint minim.
+                      This app is user friendly and very helpful. Anyone can
+                      easily use it and search for the relavent doctor. ✅ Also
+                      there are several different options available to search
+                      doctors based on areas which made my
+                      experience even better! Highly recommended.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -144,9 +147,10 @@ const Feedback = () => {
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                      multos export minim fugiat minim velit minim dolor enim
-                      duis veniam ipsum anim magna sunt elit fore quem dolore.
+                      Literally the best website to book the appointments online
+                      for Doctors. The service is great, helpline guys are very
+                      cooperative and understanding. And I don't have to hassle
+                      through different hospitals anymore now.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
@@ -177,10 +181,10 @@ const Feedback = () => {
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
-                      Quis quorum aliqua sint quem legam fore sunt eram irure
-                      aliqua veniam tempor noster veniam enim culpa labore duis
-                      sunt culpa nulla illum cillum fugiat legam esse veniam
-                      culpa fore.
+                      Great platform, very efficient and works really well on
+                      both phone and web. I think this is the most easiest way
+                      of booking appointments in Pakistan as it has made the
+                      whole process much more efficient.
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>

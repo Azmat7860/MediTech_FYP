@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -6,299 +7,164 @@ const Services = () => {
       <section id="faq" className="faq section-bg" data-aos="fade-up">
         <div className="container">
           <div className="section-title text-center">
-            <h3>Common Services, Diseases, Surgeries &amp; Medical Stores</h3>
+            <h3>Common Services, Diseases, Medicines &amp; Medical Stores</h3>
           </div>
-          </div>
-          <div id="services">
-            <div className="services-top">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-3 col-md-6 services-top-services">
-                    <h4>Services</h4>
-                    <ul>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/whitening-injections">
-                          Whitening Injections
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/ring-method-circumcision">
-                          Ring Method Circumcision
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/clinical-breast-examination-cbe">
-                          Clinical Breast Examination (CBE)
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/release-of-tongue-tie">
-                          Release Of Tongue Tie
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/kidney-infections">
-                          Kidney Infections
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/mri">MRI</a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/removal-of-moles-warts">
-                          Removal of Moles &amp; Warts
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/teeth-cleaning">
-                          Teeth Cleaning
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/testicular-torsion">
-                          Testicular Torsion
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/weight-gain">
-                          Weight Gain
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/hair-transplant">
-                          Hair Transplant
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services/hydrafacial">
-                          HydraFacial
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-services">
-                          View All
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+        </div>
+        <div id="services">
+          <div className="services-top">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-3 col-md-6 services-top-services">
+                  <h4>Services</h4>
+                  <ul>
+                    <li>
+                      <Link to="/blogs">Whitening Injections</Link>
+                    </li>
+                    <li>
+                      <Link to="/blogs">Clinical Breast Examination (CBE)</Link>
+                    </li>
+                    <li>
+                      <Link to="/blogs">Kidney Infections</Link>
+                    </li>
+                    <li>
+                      <Link to="/blogs">MRI</Link>
+                    </li>
+                    <li>
+                      <Link to="/blogs">Teeth Cleaning</Link>
+                    </li>
+                    <li>
+                      <Link to="/blogs">Weight Gain</Link>
+                    </li>
+                    <li>
+                      <Link to="/blogs">Hair Transplant</Link>
+                    </li>
+                    <li>
+                      <Link to="/blogs">HydraFacial</Link>
+                    </li>
+                    <li>
+                      <Link to="/blogs">View All</Link>
+                    </li>
+                  </ul>
+                </div>
 
-                  <div className="col-lg-3 col-md-6 services-top-services">
-                    <h4>Diseases</h4>
-                    <ul>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/male-sexual-dysfunction">
-                          Male Sexual Dysfunction 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/anal-fissurefistula">
-                          Anal Fissurefistula 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/growth-disorders">
-                          Growth Disorders 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/thyroid-gland-diseases">
-                          Thyroid Gland Diseases 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/premature-ejaculation">
-                          Premature Ejaculation 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/fungal-nail-infection">
-                          Fungal Nail Infection 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/psoriasis">
-                          Psoriasis
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/hernia">
-                          Hernia
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/migraine">
-                          Migraine 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/piles">
-                          Piles 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/polycystic-ovary-syndrome">
-                          Polycystic Ovary Syndrome 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases/abortion">
-                          Abortion 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/all-diseases">
-                          View All
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="col-lg-3 col-md-6 services-top-services">
+                  <h4>Diseases</h4>
+                  <ul>
+                    <li>
+                      <Link to="/doctor">Male Sexual Dysfunction</Link>
+                    </li>
+                    <li>
+                      <Link to="/doctor">Growth Disorders</Link>
+                    </li>
+                    <li>
+                      <Link to="/doctor">Thyroid Gland Diseases</Link>
+                    </li>
+                    <li>
+                      <Link to="/doctor">Fungal Nail Infection</Link>
+                    </li>
+                    <li>
+                      <Link to="/doctor">Hernia</Link>
+                    </li>
+                    <li>
+                      <Link to="/doctor">Migraine</Link>
+                    </li>
+                    <li>
+                      <Link to="/doctor">Piles</Link>
+                    </li>
+                    <li>
+                      <Link to="/doctor">Abortion</Link>
+                    </li>
+                    <li>
+                      <Link to="/speciality">View All</Link>
+                    </li>
+                  </ul>
+                </div>
 
-                  <div className="col-lg-3 col-md-6 services-top-services">
-                    <h4>Surgeries</h4>
-                    <ul className="widget-list ">
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/bariatric-surgery">
-                          Bariatric Surgery
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/hernia-surgery">
-                          Hernia Surgery
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/prp-hair-treatment">
-                          PRP Hair Treatment
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/skin-whitening-treatment">
-                          Skin Whitening Treatment
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/cholecystectomy">
-                          Cholecystectomy
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/endoscopy">
-                          Endoscopy
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/laser-hair-removal">
-                          Laser Hair Removal
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/angioplasty">
-                          Angioplasty
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/appendectomy">
-                          Appendectomy
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/b-scan-ocular-ultrasound">
-                          B-Scan Ocular Ultrasound
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/breast-cancer-surgery">
-                          Breast Cancer Surgery
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries/c-section">
-                          C-Section
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/surgeries">View All</a>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="col-lg-3 col-md-6 services-top-services">
+                  <h4>Medicines</h4>
+                  <ul className="widget-list ">
+                    <li>
+                      <Link to="/medicine">Bariatric Surgery</Link>
+                    </li>
+                    <li>
+                      <Link to="/medicine">Hernia Surgery</Link>
+                    </li>
+                    <li>
+                      <Link to="/medicine">PRP Hair Treatment</Link>
+                    </li>
+                    <li>
+                      <Link to="/medicine">Skin Whitening Treatment</Link>
+                    </li>
+                    <li>
+                      <Link to="/medicine">Cholecystectomy</Link>
+                    </li>
+                    <li>
+                      <Link to="/medicine">Endoscopy</Link>
+                    </li>
+                    <li>
+                      <Link to="/medicine">Angioplasty</Link>
+                    </li>
+                    <li>
+                      <Link to="/medicine">Appendectomy</Link>
+                    </li>
+                    <li>
+                      <Link to="https://www.marham.pk/surgeries">View All</Link>
+                    </li>
+                  </ul>
+                </div>
 
-                  <div className="col-lg-3 col-md-6 services-top-services">
-                    <h4>Medical Stores</h4>
-                    <ul>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/lahore">
-                          All Medical Stores in Lahore 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/karachi">
-                          All Medical Stores in Karachi 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/islamabad">
-                          All Medical Stores in Islamabad 
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/rawalpindi">
-                          All Medical Stores in Rawalpindi
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/faisalabad">
-                          All Medical Stores in Faisalabad
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/multan">
-                          All Medical Stores in Multan
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/peshawar">
-                          All Medical Stores in Peshawar
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/quetta">
-                          All Medical Stores in Quetta
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/gujranwala">
-                          All Medical Stores in Gujranwala
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/sargodha">
-                          All Medical Stores in Sargodha
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/abbottabad">
-                          All Medical Stores in Abbottabad
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/bahawalpur">
-                          All Medical Stores in Bahawalpur
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals/hyderabad">
-                          All Medical Stores in Hyderabad
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.marham.pk/hospitals">View All</a>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="col-lg-3 col-md-6 services-top-services">
+                  <h4>Medical Stores</h4>
+                  <ul>
+                    <li>
+                      <Link to="/medicalstore">
+                        All Medical Stores in Lahore
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/medicalstore">
+                        All Medical Stores in Karachi
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/medicalstore">
+                        All Medical Stores in Islamabad
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/medicalstore">
+                        All Medical Stores in Rawalpindi
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/medicalstore">
+                        All Medical Stores in Multan
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/medicalstore">
+                        All Medical Stores in Peshawar
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/medicalstore">
+                        All Medical Stores in Quetta
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/medicalstore">
+                        All Medical Stores in Rahim Yar Khan
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/medicalstore">View All</Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </section>
     </div>
   );

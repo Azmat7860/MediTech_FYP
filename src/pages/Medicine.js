@@ -47,10 +47,10 @@ const Medicine = () => {
         </div>
         <div class="blog-pagination">
               <ul class="justify-content-center">
-                <li>
+                <li class="active">
                   <Link to="/">1</Link>
                 </li>
-                <li class="active">
+                <li>
                   <Link to="/">2</Link>
                 </li>
                 <li>
