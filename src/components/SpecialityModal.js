@@ -51,18 +51,28 @@ const SpecialityModal = () => {
                 {specialists.map((item, key) => (
                   <Col span={8} className="my-2">
                     <Link>
-                      <Card
-                        bordered={true}
-                        key={key}
-                      >
+                      <Card bordered={true} key={key}>
                         <img
-                          src={`assets/img/speciality/head-with-brain${key+1}.png`}
+                          src={`assets/img/speciality/head-with-brain${
+                            key + 1
+                          }.png`}
                           className="rounded-circle"
                           alt="..."
                           width={50}
                           height={50}
-                        />&nbsp;&nbsp;
-                        <Link to={`/doctor?speciality=${item.speciality}`}>{item.speciality}</Link>
+                        />
+                        &nbsp;&nbsp;
+                        <Link
+                          to={`/doctor?speciality=${encodeURIComponent(
+                            item.speciality
+                          )}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = e.target.href;
+                          }}
+                        >
+                          {item.speciality}
+                        </Link>
                       </Card>
                     </Link>
                   </Col>

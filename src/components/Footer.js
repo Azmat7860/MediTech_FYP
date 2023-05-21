@@ -14,15 +14,12 @@ const Footer = () => {
                   MediTech is the digital healthcare platform in Pakistan.
                   MediTech helps you find and instantly book appointments or
                   online video consultations with the best doctors in Pakistan.
-                  Our transparent and intuitive platform helps you choose the
-                  right doctors by letting you check up on patient reviews,
-                  consultation fees, satisfaction scores, and wait times etc.
                 </p>
                 <div className="col-lg-12 col-md-12 footer-links mt-3">
                   <h4>Company</h4>
                   <ul>
                     <li>
-                      <i className="bi bi-chevron-right"></i> 
+                      <i className="bi bi-chevron-right"></i>
                       <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
@@ -46,7 +43,7 @@ const Footer = () => {
                       <Link to="/">Privacy policy</Link>
                     </li>
                     <li>
-                      <i className="bi bi-chevron-right"></i> 
+                      <i className="bi bi-chevron-right"></i>
                       <Link to="/faq">FAQ's</Link>
                     </li>
                   </ul>
@@ -78,15 +75,15 @@ const Footer = () => {
                     <Link to="/">Islamabad</Link>
                   </li>
                   <li>
-                    <i className="bi bi-chevron-right"></i> 
+                    <i className="bi bi-chevron-right"></i>
                     <Link to="/">Lahore</Link>
                   </li>
                   <li>
-                    <i className="bi bi-chevron-right"></i> 
+                    <i className="bi bi-chevron-right"></i>
                     <Link to="/">Karachi</Link>
                   </li>
                   <li>
-                    <i className="bi bi-chevron-right"></i> 
+                    <i className="bi bi-chevron-right"></i>
                     <Link to="/">Peshawar</Link>
                   </li>
                   <li>
@@ -107,10 +104,6 @@ const Footer = () => {
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>
-                    <Link to="/">Gujranwala</Link>
-                  </li>
-                  <li>
-                    <i className="bi bi-chevron-right"></i>
                     <Link to="/">Hyderabad</Link>
                   </li>
                   <li>
@@ -120,10 +113,6 @@ const Footer = () => {
                   <li>
                     <i className="bi bi-chevron-right"></i>
                     <Link to="/">Rahim Yar Khan</Link>
-                  </li>
-                  <li>
-                    <i className="bi bi-chevron-right"></i>
-                    <Link to="/">Sialkot</Link>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>
@@ -138,10 +127,6 @@ const Footer = () => {
                   <li>
                     <i className="bi bi-chevron-right"></i>
                     <Link to="/">Neuro Surgeon</Link>
-                  </li>
-                  <li>
-                    <i className="bi bi-chevron-right"></i>
-                    <Link to="/">Orthopedic Surgeon</Link>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>
@@ -162,10 +147,6 @@ const Footer = () => {
                   <li>
                     <i className="bi bi-chevron-right"></i>
                     <Link to="/">Gastroenterologist</Link>
-                  </li>
-                  <li>
-                    <i className="bi bi-chevron-right"></i>
-                    <Link to="/">Pediatrician</Link>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>
@@ -197,13 +178,13 @@ const Footer = () => {
               <div className="col-lg-3 col-md-6 footer-contact text-white">
                 <h4>Contact Us</h4>
                 <p>
-                  A108 Adam Street <br />
-                  New York, NY 535022
+                Street No. 4 House No. 93<br />
+                Abbasia Town, Rahim Yar Khan
                   <br />
-                  United States <br />
-                  <strong>Phone:</strong> +1 5589 55488 55
+                  Pakistan <br />
+                  <strong>Phone:</strong> 0315-0470727
                   <br />
-                  <strong>Email:</strong> info@example.com
+                  <strong>Email:</strong> imazmat102@gmail.com
                   <br />
                 </p>
               </div>

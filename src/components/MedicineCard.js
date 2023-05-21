@@ -6,7 +6,7 @@ const MedicineCard = ({id,title,description,image}) => {
   return (
     <div>
       <div class="card h-100 my-3">
-        <img src={image} class="card-img-top" alt="..." />
+        <img src={image} class="" alt="" />
         <div class="card-body">
           <h5 class="card-title">{title}</h5>
           <p class="card-text">

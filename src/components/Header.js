@@ -2,34 +2,34 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import DoctorModal from "./DoctorModal";
 
-
-
-const Header = ({ apiEndpoint,setApiEndpoint }) => {
+const Header = ({ apiEndpoint, setApiEndpoint }) => {
   const [doctor, setDoctor] = useState(false);
 
-  console.log(setApiEndpoint)
+  console.log(setApiEndpoint);
 
- 
-  
-    function handleButtonDoctor() {
-      setApiEndpoint("http://localhost:4000/doctorAuth/register");
-    }
-  
-    function handleButtonCaretaker() {
-      setApiEndpoint("http://localhost:4000/caretakerAuth/register");
-    }
-  
-    function handleButtonLab() {
-      setApiEndpoint("http://localhost:4000/labAuth/register");
-    }
-  
-    function handleButtonMedicalStore() {
-      setApiEndpoint("http://localhost:4000/medicalStoreAuth/register");
-    }
-  
+  function handleButtonDoctor() {
+    setApiEndpoint("http://localhost:4000/doctorAuth/register");
+  }
+
+  function handleButtonCaretaker() {
+    setApiEndpoint("http://localhost:4000/caretakerAuth/register");
+  }
+
+  function handleButtonLab() {
+    setApiEndpoint("http://localhost:4000/labAuth/register");
+  }
+
+  function handleButtonMedicalStore() {
+    setApiEndpoint("http://localhost:4000/medicalStoreAuth/register");
+  }
+
   return (
     <>
-      <DoctorModal doctor={doctor} setDoctor={setDoctor} apiEndpoint={apiEndpoint} />
+      <DoctorModal
+        doctor={doctor}
+        setDoctor={setDoctor}
+        apiEndpoint={apiEndpoint}
+      />
       <header id="header" className="header fixed-top" data-scrollto-offset="0">
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <Link
@@ -50,11 +50,15 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                 </Link>
                 <ul>
                   <li>
-                    <h5 className="text-success">Find doctor by speciality</h5>
+                    <h5 className="text-success">Find Doctor by Speciality</h5>
 
-                    <Link to='/doctor?speciality=Neuro surgeon'>Neuro Surgeon</Link>
+                    <Link to="/doctor?speciality=Neuro surgeon">
+                      Neuro Surgeon
+                    </Link>
 
-                    <Link to="/doctor?speciality=Dermatologist">Dermatologist</Link>
+                    <Link to="/doctor?speciality=Dermatologist">
+                      Dermatologist
+                    </Link>
 
                     <Link to="/doctor?speciality=Neurologist">Neurologist</Link>
 
@@ -65,25 +69,23 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                     <Link to="/speciality">View All Specialities</Link>
                   </li>
                   <li>
-                    <h5 className="text-success">Find Doctor by Disease</h5>
-                    <Link to="/doctor">
-                      Migraine
+                    <h5 className="text-success">Find Best Caretakers</h5>
+                    <Link to="/caretaker?address=Lahore">
+                      Best Caretakers in Lahore
                     </Link>
-                    <Link to="/doctor">
-                      Hernia
+                    <Link to="/caretaker?address=Quetta">
+                      Best Caretakers in Quetta
                     </Link>
-                    <Link to="/doctor">
-                      Fungal Nail Infection
+                    <Link to="/caretaker?address=Peshawar">
+                      Best Caretakers in Peshawar
                     </Link>
-                    <Link to="/doctor">
-                      Premature Ejaculation
+                    <Link to="/caretaker?address=Karachi">
+                      Best Caretakers in Karachi
                     </Link>
-                    <Link to="/doctor">
-                      Growth Disorders
+                    <Link to="/caretaker?address=Rahim Yar Khan">
+                      Best Caretakers in Rahim Yar Khan
                     </Link>
-                    <Link to="/speciality">
-                      View All
-                    </Link>
+                    <Link to="/speciality">View All</Link>
                   </li>
                   <li>
                     <h5 className="text-success">Find Doctor via City</h5>
@@ -102,9 +104,7 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                     <Link to="/doctor?address=Rahim Yar Khan">
                       Best Doctors in Rahim Yar Khan
                     </Link>
-                    <Link to="/speciality">
-                      View All
-                    </Link>
+                    <Link to="/speciality">View All</Link>
                   </li>
                 </ul>
               </li>
@@ -117,24 +117,24 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                 <ul>
                   <li>
                     <h5 className="text-success">Medical Stores in Pakistan</h5>
-                    <Link to="/medicalstore">
+                    <Link to="/medicalstore?address=Lahore">
                       Medical Stores in Lahore
                     </Link>
 
-                    <Link to="/medicalstore">
+                    <Link to="/medicalstore?address=Karachi">
                       Medical Stores in Karachi
                     </Link>
 
-                    <Link to="/medicalstore">
+                    <Link to="/medicalstore?address=Islamabad">
                       Medical Stores in Islamabad
-                    </Link>     
+                    </Link>
 
-                    <Link to="/medicalstore">
+                    <Link to="/medicalstore?address=Peshawar">
                       Medical Stores in Peshawar
                     </Link>
 
-                    <Link to="/medicalstore">
-                      Medical Stores in Quetta
+                    <Link to="/medicalstore?address=Rahim Yar Khan">
+                      Medical Stores in Rahim Yar Khan
                     </Link>
 
                     <Link to="/medicalstore">View All</Link>
@@ -143,24 +143,22 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                     <h5 className="text-success">
                       Medical Stores in Rahim Yar Khan
                     </h5>
-                    <Link to="/medicalstore">
-                      Fazaldin Pharmacy
+                    <Link to="/medicalstore?name=Fazal Din Pharmacy">
+                      Fazal Din Pharmacy
                     </Link>
-                    <Link to="/medicalstore">
+                    <Link to="/medicalstore?name=Asad Pharmacy">
                       Asad Pharmacy
                     </Link>
-                    <Link to="/medicalstore">
+                    <Link to="/medicalstore?name=Sawar Medical Store">
                       Sawar Medical Store
                     </Link>
-                    <Link to="/medicalstore">
+                    <Link to="/medicalstore?name=Hammad Medicos">
                       Hammad Medical Store
                     </Link>
-                    <Link to="/medicalstore">
+                    <Link to="/medicalstore?name=Al-Shifa Medical Store">
                       Al-Shifa Medical Store
                     </Link>
-                    <Link to="/medicalstore">
-                      View All
-                    </Link>
+                    <Link to="/medicalstore">View All</Link>
                   </li>
                 </ul>
               </li>
@@ -172,43 +170,29 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                 <ul>
                   <li>
                     <h5 className="text-success">Book Lab Tests</h5>
-                    <Link to="/lab">
-                      Chughtai Lab
-                    </Link>
+                    <Link to="/lab?name=Chughtai Lab">Chughtai Lab</Link>
 
-                    <Link to="/lab">
-                      CLINLAB
-                    </Link>
+                    <Link to="/lab?name=CLINLAB">CLINLAB</Link>
 
-                    <Link to="/lab">
-                      One Health Labs
-                    </Link>
+                    <Link to="/lab?name=One Health Labs">One Health Labs</Link>
 
-                    <Link to="/lab">
-                      Dr. Essa’s Lab
-                    </Link>
+                    <Link to="/lab?name=Dr. Essa's Lab">Dr. Essa’s Lab</Link>
 
-                    <Link to="/lab">
-                      Citilab
-                    </Link>
+                    <Link to="/lab?name=Citilab">Citilab</Link>
+                    <Link to="/lab">View All</Link>
                   </li>
                   <li>
                     <h5 className="text-success">Labs in Pakistan</h5>
-                    <Link to="/lab">
-                      Labs in Lahore
+                    <Link to="/lab?address=Lahore">Best Labs in Lahore</Link>
+                    <Link to="/lab?address=Quetta">Best Labs in Quetta</Link>
+                    <Link to="/lab?address=Peshawar">
+                      Best Labs in Peshawar
                     </Link>
-                    <Link to="/lab">
-                      Labs in Islamabad
+                    <Link to="/lab?address=Karachi">Best Labs in Karachi</Link>
+                    <Link to="/lab?address=Rahim Yar Khan">
+                      Best Labs in Rahim Yar Khan
                     </Link>
-                    <Link to="/lab">
-                      Labs in Karachi
-                    </Link>
-                    <Link to="/lab">
-                      Labs in Peshawar
-                    </Link>
-                    <Link to="/lab">
-                      Labs in Quetta
-                    </Link>
+                    <Link to="/lab">View All</Link>
                   </li>
                 </ul>
               </li>
@@ -222,23 +206,42 @@ const Header = ({ apiEndpoint,setApiEndpoint }) => {
                 </NavLink>
                 <ul>
                   <li>
-                    <Link to={"/"} onClick={handleButtonDoctor} data-bs-toggle="modal" data-bs-target="#doctorModal">
+                    <Link
+                      to={"/"}
+                      onClick={handleButtonDoctor}
+                      data-bs-toggle="modal"
+                      data-bs-target="#doctorModal"
+                    >
                       As Doctor
                     </Link>
                   </li>
                   <li>
-                    <Link to={"/"} onClick={handleButtonCaretaker} data-bs-toggle="modal" data-bs-target="#doctorModal">
+                    <Link
+                      to={"/"}
+                      onClick={handleButtonCaretaker}
+                      data-bs-toggle="modal"
+                      data-bs-target="#doctorModal"
+                    >
                       As Caretaker
                     </Link>
                   </li>
                   <li>
-                    <Link to={"/"} onClick={handleButtonLab} data-bs-toggle="modal" data-bs-target="#doctorModal">
-                      
+                    <Link
+                      to={"/"}
+                      onClick={handleButtonLab}
+                      data-bs-toggle="modal"
+                      data-bs-target="#doctorModal"
+                    >
                       Medical Lab
                     </Link>
                   </li>
                   <li>
-                    <Link to={"/"} onClick={handleButtonMedicalStore} data-bs-toggle="modal" data-bs-target="#doctorModal">
+                    <Link
+                      to={"/"}
+                      onClick={handleButtonMedicalStore}
+                      data-bs-toggle="modal"
+                      data-bs-target="#doctorModal"
+                    >
                       Medical Store
                     </Link>
                   </li>

@@ -29,7 +29,7 @@ const Speciality = () => {
   }, []);
   return (
     <div>
-         <Breadcrumb title={"All Specialists"} />
+         <Breadcrumb title={"All Specialists"} length={specialists.length + " Specialists"} />
       <section id="medicine" className="medicine section-bg mt-3">
         <div className="container">
           <div className="row">

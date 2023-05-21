@@ -6,7 +6,7 @@ const Faq = () => {
 
   return (
     <div>
-      <Breadcrumb/>
+      <Breadcrumb title={"FAQ's"} />
       <section id="faq" className="faq section-bg">
         <div className="container" data-aos="fade-up">
           <div className="section-title text-center">

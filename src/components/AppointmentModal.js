@@ -1,15 +1,12 @@
 import axios from "axios";
-import React, { useContext } from "react";
+import React from "react";
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router";
-import { authContext } from "./../context/authContext";
 import { UserOutlined } from "@ant-design/icons";
 import { LockOutlined } from "@ant-design/icons";
 
 const AppointmentModal = ({ id, name, type }) => {
   console.log(id);
-  const auth = useContext(authContext);
-  console.log(auth);
   const navigate = useNavigate();
 
   const onFinish = (values) => {
@@ -107,6 +104,10 @@ const AppointmentModal = ({ id, name, type }) => {
                     type="primary"
                     htmlType="submit"
                     className="login-form-button btn btn-primary w-100 p-2"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.location.href = e.target.href;
+                    }}
                   >
                     Book Appointment
                   </Button>

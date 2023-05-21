@@ -18,6 +18,7 @@ import MedicalStore from "./pages/MedicalStore";
 import Lab from "./pages/Lab";
 import Speciality from "./pages/Speciality";
 import Doctor from "./pages/Doctor";
+import Caretaker from './pages/Caretaker';
 import ULogin from "./user/auth/Login";
 import { userinit } from "./js/user-main";
 import Dashboard from "./user/pages/Dashboard";
@@ -39,6 +40,7 @@ function App() {
   useEffect(() => {
     // Call a function from the imported script
     init();
+
     userinit();
   }, []);
 
@@ -127,6 +129,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/booked-appointment" element={<BookAppointment />} />
               <Route path="/doctor" element={<Doctor />} />
+              <Route path="/caretaker" element={<Caretaker />} />
               <Route path="/medicine" element={<Medicine />} />
               <Route path="/medicalstore" element={<MedicalStore />} />
               <Route path="/lab" element={<Lab />} />
