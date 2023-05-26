@@ -3,10 +3,16 @@ import Breadcrumb from '../components/Breadcrumb'
 import SpecialityCard from '../components/SpecialityCard'
 import { useState } from 'react';
 import axios from 'axios';
+// import { useLocation } from 'react-router-dom';
 
 const Speciality = () => {
   document.documentElement.scrollTop = 0;
   const [specialists, setSpecialists] = useState([]);
+  // const location = useLocation();
+  // const searchParams = new URLSearchParams(location.search);
+  // const specialityName = searchParams.get("speciality");
+  // const address = searchParams.get("address");
+  // console.log(location.state.city);
 
   console.log(specialists)
   useEffect(() => {

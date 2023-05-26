@@ -51,28 +51,28 @@ const Services = () => {
                   <h4>Diseases</h4>
                   <ul>
                     <li>
-                      <Link to="/doctor">Male Sexual Dysfunction</Link>
+                      <Link to="/speciality">Male Sexual Dysfunction</Link>
                     </li>
                     <li>
-                      <Link to="/doctor">Growth Disorders</Link>
+                      <Link to="/speciality">Growth Disorders</Link>
                     </li>
                     <li>
-                      <Link to="/doctor">Thyroid Gland Diseases</Link>
+                      <Link to="/speciality">Thyroid Gland Diseases</Link>
                     </li>
                     <li>
-                      <Link to="/doctor">Fungal Nail Infection</Link>
+                      <Link to="/speciality">Fungal Nail Infection</Link>
                     </li>
                     <li>
-                      <Link to="/doctor">Hernia</Link>
+                      <Link to="/speciality">Hernia</Link>
                     </li>
                     <li>
-                      <Link to="/doctor">Migraine</Link>
+                      <Link to="/speciality">Migraine</Link>
                     </li>
                     <li>
-                      <Link to="/doctor">Piles</Link>
+                      <Link to="/speciality">Piles</Link>
                     </li>
                     <li>
-                      <Link to="/doctor">Abortion</Link>
+                      <Link to="/speciality">Abortion</Link>
                     </li>
                     <li>
                       <Link to="/speciality">View All</Link>

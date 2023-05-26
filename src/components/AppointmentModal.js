@@ -1,5 +1,5 @@
-import axios from "axios";
 import React from "react";
+import axios from "axios";
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router";
 import { UserOutlined } from "@ant-design/icons";
@@ -32,6 +32,7 @@ const AppointmentModal = ({ id, name, type }) => {
       .then((response) => {
         console.log(JSON.stringify(response.data));
         navigate("/booked-appointment");
+        window.location.reload();
       })
       .catch((error) => {
         console.log(error);
@@ -104,10 +105,10 @@ const AppointmentModal = ({ id, name, type }) => {
                     type="primary"
                     htmlType="submit"
                     className="login-form-button btn btn-primary w-100 p-2"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href = e.target.href;
-                    }}
+                    // onClick={(e) => {
+                    //   e.preventDefault();
+                    //   window.location.href = e.target.href;
+                    // }}
                   >
                     Book Appointment
                   </Button>

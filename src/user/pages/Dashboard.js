@@ -1,8 +1,42 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 // import '../css/style.css'
 
 const Dashboard = () => {
+  const [blogs, setBlogs] = useState([]);
+  document.documentElement.scrollTop = 0;
+
+  const removecommas = (str) => {
+    return str.slice(1, -1);
+    // + str.charAt(0).toUpperCase();
+  };
+
+  function limitText(text, limit) {
+    if (text.length > limit) {
+      return text.substring(0, limit) + "...";
+    }
+    return text;
+  }
+
+  useEffect(() => {
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: "http://localhost:4000/api/blog?limit=6&skip=0",
+      headers: {},
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data.data));
+        setBlogs(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div>
       <main id="main" class="main">
@@ -56,7 +90,7 @@ const Dashboard = () => {
 
                     <div class="card-body">
                       <h5 class="card-title">
-                        Sales <span>| Today</span>
+                        Appointments <span>| Today</span>
                       </h5>
 
                       <div class="d-flex align-items-center">
@@ -64,9 +98,9 @@ const Dashboard = () => {
                           <i class="bi bi-cart"></i>
                         </div>
                         <div class="ps-3">
-                          <h6>145</h6>
+                          <h6>34</h6>
                           <span class="text-success small pt-1 fw-bold">
-                            12%
+                            8%
                           </span>
                           <span class="text-muted small pt-2 ps-1">
                             increase
@@ -110,7 +144,7 @@ const Dashboard = () => {
 
                     <div class="card-body">
                       <h5 class="card-title">
-                        Revenue <span>| This Month</span>
+                        Users <span>| This Month</span>
                       </h5>
 
                       <div class="d-flex align-items-center">
@@ -118,12 +152,12 @@ const Dashboard = () => {
                           <i class="bi bi-currency-dollar"></i>
                         </div>
                         <div class="ps-3">
-                          <h6>$3,264</h6>
+                          <h6>29</h6>
                           <span class="text-success small pt-1 fw-bold">
-                            8%
+                            3%
                           </span>
                           <span class="text-muted small pt-2 ps-1">
-                            increase
+                            decrease
                           </span>
                         </div>
                       </div>
@@ -164,7 +198,7 @@ const Dashboard = () => {
 
                     <div class="card-body">
                       <h5 class="card-title">
-                        Customers <span>| This Year</span>
+                        Patients <span>| This Month</span>
                       </h5>
 
                       <div class="d-flex align-items-center">
@@ -172,12 +206,12 @@ const Dashboard = () => {
                           <i class="bi bi-people"></i>
                         </div>
                         <div class="ps-3">
-                          <h6>1244</h6>
+                          <h6>59</h6>
                           <span class="text-danger small pt-1 fw-bold">
                             12%
                           </span>
                           <span class="text-muted small pt-2 ps-1">
-                            decrease
+                            increase
                           </span>
                         </div>
                       </div>
@@ -261,23 +295,23 @@ const Dashboard = () => {
 
                     <div class="card-body">
                       <h5 class="card-title">
-                        Recent Sales <span>| Today</span>
+                        Recent Appointments <span>| Today</span>
                       </h5>
 
                       <table class="table table-borderless datatable">
                         <thead>
                           <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Customer</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
+                            <th scope="col">Pateints</th>
+                            <th scope="col">Speciality</th>
+                            {/* <th scope="col">Price</th> */}
                             <th scope="col">Status</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <th scope="row">
-                              <a href="/">#2457</a>
+                              <a href="/">1</a>
                             </th>
                             <td>Brandon Jacob</td>
                             <td>
@@ -285,14 +319,14 @@ const Dashboard = () => {
                                 At praesentium minu
                               </a>
                             </td>
-                            <td>$64</td>
+                            {/* <td>$64</td> */}
                             <td>
                               <span class="badge bg-success">Approved</span>
                             </td>
                           </tr>
                           <tr>
                             <th scope="row">
-                              <a href="/">#2147</a>
+                              <a href="/">2</a>
                             </th>
                             <td>Bridie Kessler</td>
                             <td>
@@ -300,14 +334,14 @@ const Dashboard = () => {
                                 Blanditiis dolor omnis similique
                               </a>
                             </td>
-                            <td>$47</td>
+                            {/* <td>$47</td> */}
                             <td>
                               <span class="badge bg-warning">Pending</span>
                             </td>
                           </tr>
                           <tr>
                             <th scope="row">
-                              <a href="/">#2049</a>
+                              <a href="/">3</a>
                             </th>
                             <td>Ashleigh Langosh</td>
                             <td>
@@ -315,14 +349,14 @@ const Dashboard = () => {
                                 At recusandae consectetur
                               </a>
                             </td>
-                            <td>$147</td>
+                            {/* <td>$147</td> */}
                             <td>
                               <span class="badge bg-success">Approved</span>
                             </td>
                           </tr>
                           <tr>
                             <th scope="row">
-                              <a href="/">#2644</a>
+                              <a href="/">4</a>
                             </th>
                             <td>Angus Grady</td>
                             <td>
@@ -330,14 +364,14 @@ const Dashboard = () => {
                                 Ut voluptatem id earum et
                               </a>
                             </td>
-                            <td>$67</td>
+                            {/* <td>$67</td> */}
                             <td>
                               <span class="badge bg-danger">Rejected</span>
                             </td>
                           </tr>
                           <tr>
                             <th scope="row">
-                              <a href="/">#2644</a>
+                              <a href="/">5</a>
                             </th>
                             <td>Raheem Lehner</td>
                             <td>
@@ -345,7 +379,7 @@ const Dashboard = () => {
                                 Sunt similique distinctio
                               </a>
                             </td>
-                            <td>$165</td>
+                            {/* <td>$165</td> */}
                             <td>
                               <span class="badge bg-success">Approved</span>
                             </td>
@@ -389,10 +423,10 @@ const Dashboard = () => {
 
                     <div class="card-body pb-0">
                       <h5 class="card-title">
-                        Top Selling <span>| Today</span>
+                        Top Specialists <span>| Today</span>
                       </h5>
 
-                      <table class="table table-borderless">
+                      <table class="table table-borderless datatable">
                         <thead>
                           <tr>
                             <th scope="col">Preview</th>
@@ -592,104 +626,6 @@ const Dashboard = () => {
               </div>
               {/* <!-- End Recent Activity --> */}
 
-              {/* <!-- Budget Report --> */}
-              <div class="card">
-                <div class="filter">
-                  <a class="icon" href="/" data-bs-toggle="dropdown">
-                    <i class="bi bi-three-dots"></i>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item" href="/">
-                        Today
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/">
-                        This Month
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/">
-                        This Year
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="card-body pb-0">
-                  <h5 class="card-title">
-                    Budget Report <span>| This Month</span>
-                  </h5>
-
-                  <div
-                    id="budgetChart"
-                    style={{minHeight: "400px"}}
-                    class="echart"
-                  ></div>
-
-                  {/* <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  
-                });
-              </script> */}
-                </div>
-              </div>
-              {/* <!-- End Budget Report --> */}
-
-              {/* <!-- Website Traffic --> */}
-              <div class="card">
-                <div class="filter">
-                  <a class="icon" href="/" data-bs-toggle="dropdown">
-                    <i class="bi bi-three-dots"></i>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li>
-                      <a class="dropdown-item" href="/">
-                        Today
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/">
-                        This Month
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="/">
-                        This Year
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div class="card-body pb-0">
-                  <h5 class="card-title">
-                    Website Traffic <span>| Today</span>
-                  </h5>
-
-                  <div
-                    id="trafficChart"
-                    style={{minHeight: "400px"}}
-                    class="echart"
-                  ></div>
-
-                  {/* <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  
-                });
-              </script> */}
-                </div>
-              </div>
-              {/* <!-- End Website Traffic --> */}
-
               {/* <!-- News & Updates Traffic --> */}
               <div class="card">
                 <div class="filter">
@@ -720,67 +656,27 @@ const Dashboard = () => {
                 </div>
 
                 <div class="card-body pb-0">
-                  <h5 class="card-title">
-                    News &amp; Updates <span>| Today</span>
+                  <h5 class="card-title mt-2">
+                    Recent Health Blogs <span>| Today</span>
                   </h5>
 
                   <div class="news">
-                    <div class="post-item clearfix">
-                      <img src="user-assets/img/news-1.jpg" alt="" />
-                      <h4>
-                        <a href="/">Nihil blanditiis at in nihil autem</a>
-                      </h4>
-                      <p>
-                        Sit recusandae non aspernatur laboriosam. Quia enim
-                        eligendi sed ut harum...
-                      </p>
-                    </div>
-
-                    <div class="post-item clearfix">
-                      <img src="user-assets/img/news-2.jpg" alt="" />
-                      <h4>
-                        <a href="/">Quidem autem et impedit</a>
-                      </h4>
-                      <p>
-                        Illo nemo neque maiores vitae officiis cum eum turos
-                        elan dries werona nande...
-                      </p>
-                    </div>
-
-                    <div class="post-item clearfix">
-                      <img src="user-assets/img/news-3.jpg" alt="" />
-                      <h4>
-                        <a href="/">
-                          Id quia et et ut maxime similique occaecati ut
-                        </a>
-                      </h4>
-                      <p>
-                        Fugiat voluptas vero eaque accusantium eos. Consequuntur
-                        sed ipsam et totam...
-                      </p>
-                    </div>
-
-                    <div class="post-item clearfix">
-                      <img src="user-assets/img/news-4.jpg" alt="" />
-                      <h4>
-                        <a href="/">Laborum corporis quo dara net para</a>
-                      </h4>
-                      <p>
-                        Qui enim quia optio. Eligendi aut asperiores enim
-                        repellendusvel rerum cuder...
-                      </p>
-                    </div>
-
-                    <div class="post-item clearfix">
-                      <img src="user-assets/img/news-5.jpg" alt="" />
-                      <h4>
-                        <a href="/">Et dolores corrupti quae illo quod dolor</a>
-                      </h4>
-                      <p>
-                        Odit ut eveniet modi reiciendis. Atque cupiditate libero
-                        beatae dignissimos eius...
-                      </p>
-                    </div>
+                    {blogs.map((item, key) => {
+                      return (
+                        <div class="post-item clearfix">
+                          <img
+                            src={`assets/img/blog/blogs-${key + 1}.png`}
+                            alt=""
+                          />
+                          <h4>
+                            <a href="/blog-item">
+                              {removecommas(limitText(item.title, 35))}
+                            </a>
+                          </h4>
+                          <p>{removecommas(limitText(item.description, 50))}</p>
+                        </div>
+                      );
+                    })}
                   </div>
                   {/* <!-- End sidebar recent posts--> */}
                 </div>
@@ -793,7 +689,7 @@ const Dashboard = () => {
       </main>
       {/* <!-- End #main --> */}
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

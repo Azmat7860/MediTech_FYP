@@ -14,7 +14,25 @@ const Doctor = () => {
   console.log(address)
 
   useEffect(() => {
-    if (specialityName) {
+    if(specialityName && address) {
+      let config = {
+        method: "get",
+        maxBodyLength: Infinity,
+        url: `http://localhost:4000/api/doctor?address=${address}&speciality=${specialityName}`,
+        headers: {},
+      };
+  
+      axios
+        .request(config)
+        .then((response) => {
+          console.log(JSON.stringify(response.data.data));
+            setSpecialists(response.data.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+    else if (specialityName) {
       
     let config = {
       method: "get",

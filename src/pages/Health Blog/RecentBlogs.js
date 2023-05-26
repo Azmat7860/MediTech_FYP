@@ -11,21 +11,20 @@ const RecentBlogs = () => {
 };
   useEffect(() => {
     let config = {
-      method: "get",
+      method: 'get',
       maxBodyLength: Infinity,
-      url: "http://localhost:4000/api/blog/",
-      headers: {},
+      url: 'http://localhost:4000/api/blog?limit=3&skip=0',
+      headers: { }
     };
-
-    axios
-      .request(config)
-      .then((response) => {
-        console.log(JSON.stringify(response.data.data));
-        setBlogs(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    
+    axios.request(config)
+    .then((response) => {
+      console.log(JSON.stringify(response.data));
+      setBlogs(response.data.data)
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   }, []);
   return (
     <div>
