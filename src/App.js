@@ -62,14 +62,6 @@ function App() {
   const clearUser = () => {
     setUserData(null);
   };
-  const [patientData, setPatientData] = useState(null);
-  const setPatient = (data) => {
-    console.log("API RESPONSE: " + data);
-    setPatientData(data);
-  };
-  const clearPatient = () => {
-    setUserData(null);
-  };
 
   return (
     <authContext.Provider
@@ -80,9 +72,6 @@ function App() {
         setUser,
         clearUser,
         userData,
-        patientData,
-        setPatient,
-        clearPatient,
       }}
     >
       <>

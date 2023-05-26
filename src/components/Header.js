@@ -44,7 +44,7 @@ const Header = ({ apiEndpoint, setApiEndpoint }) => {
           <nav id="navbar" className="navbar">
             <ul>
               <li className="dropdown megamenu">
-                <Link to="/doctor">
+                <Link to="/">
                   <span>Doctors</span>
                   <i className="bi bi-chevron-down dropdown-indicator"></i>
                 </Link>
@@ -69,25 +69,6 @@ const Header = ({ apiEndpoint, setApiEndpoint }) => {
                     <Link to="/speciality">View All Specialities</Link>
                   </li>
                   <li>
-                    <h5 className="text-success">Find Best Caretakers</h5>
-                    <Link to="/caretaker?address=Lahore">
-                      Best Caretakers in Lahore
-                    </Link>
-                    <Link to="/caretaker?address=Quetta">
-                      Best Caretakers in Quetta
-                    </Link>
-                    <Link to="/caretaker?address=Peshawar">
-                      Best Caretakers in Peshawar
-                    </Link>
-                    <Link to="/caretaker?address=Karachi">
-                      Best Caretakers in Karachi
-                    </Link>
-                    <Link to="/caretaker?address=Rahim Yar Khan">
-                      Best Caretakers in Rahim Yar Khan
-                    </Link>
-                    <Link to="/speciality">View All</Link>
-                  </li>
-                  <li>
                     <h5 className="text-success">Find Doctor via City</h5>
                     <Link to="/doctor?address=Lahore">
                       Best Doctors in Lahore
@@ -106,9 +87,27 @@ const Header = ({ apiEndpoint, setApiEndpoint }) => {
                     </Link>
                     <Link to="/speciality">View All</Link>
                   </li>
+                  <li>
+                    <h5 className="text-success">Find Best Caretakers</h5>
+                    <Link to="/caretaker?address=Lahore">
+                      Best Caretakers in Lahore
+                    </Link>
+                    <Link to="/caretaker?address=Quetta">
+                      Best Caretakers in Quetta
+                    </Link>
+                    <Link to="/caretaker?address=Peshawar">
+                      Best Caretakers in Peshawar
+                    </Link>
+                    <Link to="/caretaker?address=Karachi">
+                      Best Caretakers in Karachi
+                    </Link>
+                    <Link to="/caretaker?address=Rahim Yar Khan">
+                      Best Caretakers in Rahim Yar Khan
+                    </Link>
+                    <Link to="/speciality">View All</Link>
+                  </li>
                 </ul>
               </li>
-
               <li className="dropdown megamenu">
                 <Link to="/">
                   <span>Medical Stores</span>

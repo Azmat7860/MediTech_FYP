@@ -1,20 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
-import HorizontalCards from './HorizontalCards';
+import HorizontalCards from "./HorizontalCards";
 // import TopSpecialist from './TopSpecialist';
 // import TopDisease from './TopDisease';
-import CallToAction from './CallToAction';
-import Step from './Step';
-import Feedback from './Feedback';
-import Partner from './Partner';
-import RecentBlogs from './Health Blog/RecentBlogs';
-import Services from './Services';
+import CallToAction from "./CallToAction";
+import Step from "./Step";
+import Feedback from "./Feedback";
+import Partner from "./Partner";
+import RecentBlogs from "./Health Blog/RecentBlogs";
+import Services from "./Services";
 import TopMedicine from "./TopMedicine";
-
+import { useNavigate } from "react-router";
+import axios from "axios";
+// import { Link, useLocation } from "react-router-dom";
 
 const Home = () => {
   document.documentElement.scrollTop = 0;
 
+  const [specialists, setSpecialists] = useState([]);
+  console.log(specialists);
+
+  const navigate = useNavigate();
+
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [selectedSpeciality, setSelectedSpeciality] = useState("");
+
+  const handleLocationChange = (event) => {
+    setSelectedLocation(event.target.value);
+  };
+
+  const handleSpecialityChange = (event) => {
+    setSelectedSpeciality(event.target.value);
+  };
+
+  useEffect(() => {
+    let config = {
+      method: "get",
+      maxBodyLength: Infinity,
+      url: `http://localhost:4000/api/doctor?limit=8`,
+      headers: {},
+    };
+
+    axios
+      .request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data.data));
+        setSpecialists(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const uniqueLocations = [...new Set(specialists.map((item) => item.address))];
+  console.log(uniqueLocations);
+  const uniqueSpecialities = [
+    ...new Set(specialists.map((item) => item.speciality)),
+  ];
+
+  const handleSearch = () => {
+    // navigate("/speciality");
+    navigate(`/doctor?address=${selectedLocation}&speciality=${selectedSpeciality}`);
+  };
   return (
     <div>
       <section
@@ -47,33 +94,44 @@ const Home = () => {
                   <div className="col-12 col-md col-lg-5 d-flex flex-column my-1 px-3">
                     <div className="form-group-overlay first">
                       <label htmlFor="locations">Location</label>
-                      <input
-                        id="location"
-                        name="address"
-                        className="form-control m-0 border-0 bg-transparent shadow-none h-auto"
-                        type="text"
-                        size="50"
-                        placeholder="Select Location"
-                        autoComplete="off"
-                      />
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                        onChange={handleLocationChange}
+                        value={selectedLocation}
+                      >
+                        <option value="">Select Location</option>
+                        {uniqueLocations.map((location, key) => (
+                          <option key={key} value={location}>
+                            {location}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
                   <div className="col-12 col-md col-lg-5 d-flex flex-column my-1 px-3">
                     <div className="form-group-overlay">
                       <label htmlFor="doctors">Doctor</label>
-                      <input
-                        id="doctor"
-                        name="speciality"
-                        className="form-control m-0 border-0 bg-transparent shadow-none h-auto"
-                        type="text"
-                        placeholder="Find Doctors or Specialists"
-                      />
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                        onChange={handleSpecialityChange}
+                        value={selectedSpeciality}
+                      >
+                        <option value="">Select Speciality</option>
+                        {uniqueSpecialities.map((speciality, key) => (
+                          <option key={key} value={speciality}>
+                            {speciality}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
                   <div className="col-12 col-md-3 col-lg-2 px-2">
                     <button
                       className="btn btn-success btn-block h-100 btn-search"
                       type="submit"
+                      onClick={handleSearch}
                     >
                       Search
                     </button>
@@ -86,7 +144,7 @@ const Home = () => {
       </section>
       <HorizontalCards />
       {/* <TopSpecialist /> */}
-      <TopMedicine/>
+      <TopMedicine />
       {/* <TopDisease /> */}
       <CallToAction />
       <Step />

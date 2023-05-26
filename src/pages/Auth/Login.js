@@ -36,7 +36,7 @@ function Login() {
     axios(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
-        auth.setPatient(response.data);
+        auth.setUser(response.data);
         auth.login();
       })
       .catch((error) => {

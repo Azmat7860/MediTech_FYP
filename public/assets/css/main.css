@@ -878,6 +878,9 @@ font-size: 18px;
   padding-top: 220px;
 }
 
+.form-select{
+  border: 1px var(--color-white);
+}
 @media (max-width: 767.98px) {
 
   section[class*=with-header],
@@ -3145,7 +3148,7 @@ nav[aria-label="breadcrumb"] li:before {
 }
 
 .blog .posts-list .title a:hover {
-  color: var(--color-primary);
+  color: var(--color-green);
 }
 
 .blog .posts-list .post-author-img {

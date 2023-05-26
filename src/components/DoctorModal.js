@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   LockOutlined,
   MailOutlined,
@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 
 const DoctorModal = ({ apiEndpoint }) => {
   console.log(apiEndpoint);
+  // const [showModal, setShowModal] = useState(false);
 
   let doctorApi = "http://localhost:4000/doctorAuth/register";
   let caretakerApi = "http://localhost:4000/caretakerAuth/register";
