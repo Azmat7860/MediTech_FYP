@@ -234,7 +234,7 @@ const Header = () => {
                   class="rounded-circle"
                 />
                 <span class="d-none d-md-block dropdown-toggle ps-2">
-                  K. Anderson
+                 {localStorage.getItem("users")}
                 </span>
               </a>
               {/* 

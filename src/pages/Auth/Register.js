@@ -38,6 +38,7 @@ function Register() {
     axios(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
+        localStorage.setItem('users', response.data.data.name);
         setIsRegistered(true);
       })
       .catch((error) => {

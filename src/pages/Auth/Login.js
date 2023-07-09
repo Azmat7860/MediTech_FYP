@@ -36,6 +36,7 @@ function Login() {
     axios(config)
       .then((response) => {
         console.log(JSON.stringify(response.data));
+        localStorage.setItem('user', response.data.data.token);
         auth.setUser(response.data);
         auth.login();
       })

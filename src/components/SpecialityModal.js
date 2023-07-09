@@ -17,7 +17,7 @@ const SpecialityModal = () => {
     axios
       .request(config)
       .then((response) => {
-        console.log(JSON.stringify(response.data));
+        console.log(JSON.stringify(response.data.data));
         setSpecialists(response.data.data);
       })
       .catch((error) => {

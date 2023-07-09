@@ -18,7 +18,7 @@ import MedicalStore from "./pages/MedicalStore";
 import Lab from "./pages/Lab";
 import Speciality from "./pages/Speciality";
 import Doctor from "./pages/Doctor";
-import Caretaker from './pages/Caretaker';
+import Caretaker from "./pages/Caretaker";
 import ULogin from "./user/auth/Login";
 import { userinit } from "./js/user-main";
 import Dashboard from "./user/pages/Dashboard";
@@ -38,9 +38,11 @@ import BookAppointment from "./pages/BookAppointment";
 
 function App() {
   useEffect(() => {
+    if (!localStorage.getItem("users")) {
+      localStorage.setItem("users", JSON.stringify([]));
+    }
     // Call a function from the imported script
     init();
-
     userinit();
   }, []);
 

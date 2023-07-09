@@ -33,6 +33,7 @@ const Login = () => {
   axios.request(config)
   .then((response) => {
     console.log(JSON.stringify(response.data));
+    localStorage.setItem('users', response.data);
     auth.setUser(response.data);
     auth.login();
     navigate("/user-dashboard");
